@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Martian148</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="/"/>
+  <updated>2020-02-16T02:05:09.013Z</updated>
+  <id>/</id>
+  
+  <author>
+    <name>CYW</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>转载</title>
+    <link href="/2020/02/15/%E8%BD%AC%E8%BD%BD/"/>
+    <id>/2020/02/15/转载/</id>
+    <published>2020-02-15T14:41:09.000Z</published>
+    <updated>2020-02-16T02:05:09.013Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="转载" scheme="/categories/%E8%BD%AC%E8%BD%BD/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>随想</title>
+    <link href="/2020/02/15/%E9%9A%8F%E6%83%B3/"/>
+    <id>/2020/02/15/随想/</id>
+    <published>2020-02-15T14:40:55.000Z</published>
+    <updated>2020-02-16T02:05:04.523Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="随想" scheme="/categories/%E9%9A%8F%E6%83%B3/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>生活</title>
+    <link href="/2020/02/15/%E7%94%9F%E6%B4%BB/"/>
+    <id>/2020/02/15/生活/</id>
+    <published>2020-02-15T14:39:16.000Z</published>
+    <updated>2020-02-16T02:05:00.486Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>资源</title>
+    <link href="/2020/02/15/%E8%B5%84%E6%BA%90/"/>
+    <id>/2020/02/15/资源/</id>
+    <published>2020-02-15T14:37:56.000Z</published>
+    <updated>2020-02-16T02:05:15.868Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="资源" scheme="/categories/%E8%B5%84%E6%BA%90/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>技术</title>
+    <link href="/2020/02/15/%E6%8A%80%E6%9C%AF/"/>
+    <id>/2020/02/15/技术/</id>
+    <published>2020-02-15T14:27:05.000Z</published>
+    <updated>2020-02-16T06:51:29.602Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;测试文档&quot;&gt;&lt;a href=&quot;#测试文档&quot; class=&quot;headerlink&quot; title=&quot;测试文档&quot;&gt;&lt;/a&gt;测试文档&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;BP算法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  训练集    $\left{\left(x^{(1)},
+        
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
+</feed>
