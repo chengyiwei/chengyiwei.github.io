@@ -393,7 +393,9 @@
         <div class="entry-content">
           <h2 id="A-Digits"><a href="#A-Digits" class="headerlink" title="A.Digits"></a>A.Digits</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p> 给定$n$令$ i=\overline{x_{m}\cdots x_{1}x_{0} },n-i=\overline{y_{m}\cdots y_{1}y_{0} } $其中$x_i,y_i$分别是$i,n-i$的十进制表示，令$ f(i)=\sum_{i=0}^m x_i\times y_i $其中$x_i,y_i$都为0，求$\sum_{i=0}^n f(i) \bmod 10^9+7$</p>
 <h3 id="sol"><a href="#sol" class="headerlink" title="sol"></a>sol</h3><p>看到这么大的数据范围，自然而然就想到了数位DP，定义$F[i][j]$表示考虑完第$i-1$位，第$i$位是否被借位了，$j$是$0/1$。$g[i][j]$表示前$i-1$数字的个数$j$同样表示是否有被借位。</p>
-<p>于是转移方程就出来了$F[i+1][flg]+=F[i][s]+g[i][s]<em>j</em>(l+flg*10-j)$ $g[i+1][flg]+=g[i][s]$ $g$数组累计数字个数。</p>
+<p>于是转移方程就出来了 $F[i+1][flg]+=F[i][s]+g[i ][s] <em> j </em>(l+flg*10-j) $</p>
+<p>$g[i+1][flg]+=g[i][s]$</p>
+<p>$g$数组累计数字个数。</p>
 <p>显然答案就是$F[m+1][0]$，$m$是数字的个数。</p>
 <h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><pre><code class="lang-cpp">#include&lt;bits/stdc++.h&gt;
 using namespace std;
@@ -711,15 +713,15 @@ int main()
           
             <div class="post-nepre half next">
           
-            <a href="/2020/02/19/Codeforces游玩攻略/" rel="next">
+            <a href="/2020/02/19/免VIP-全网看各大视频站方法/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://5b0988e595225.cdn.sohucs.com/images/20180803/53a861983c5b461f94d8c4f225c80c77.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://5b0988e595225.cdn.sohucs.com/images/20180803/53a861983c5b461f94d8c4f225c80c77.png">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://img3.100bt.com/upload/ttq/20130420/1366453245538.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://img3.100bt.com/upload/ttq/20130420/1366453245538.jpg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                Codeforces游玩攻略</h3>
+                免VIP-全网看各大视频站方法</h3>
                 <hr>
               </div>
             </a>
