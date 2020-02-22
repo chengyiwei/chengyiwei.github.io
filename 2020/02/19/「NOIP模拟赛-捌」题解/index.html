@@ -523,7 +523,7 @@ int main()
 </ul>
 <p>初始权值为$0$</p>
 <p>$n\leq 100000,m\leq 100000,0\leq k\leq 2,-100\leq d \leq 100$</p>
-<p>这道题有$n$条边和$n$条边，也就是说这个图是一个环加若干棵树，对于一棵树。我们要修改的是$val[u],val[fa[u]],val[fa[fa[u]]],val[fa[son[u]]],val[son[u]],val[son[son[u]]]$</p>
+<h3 id="sol-2"><a href="#sol-2" class="headerlink" title="sol"></a>sol</h3><p>这道题有$n$条边和$n$条边，也就是说这个图是一个环加若干棵树，对于一棵树。我们要修改的是$val[u],val[fa[u]],val[fa[fa[u]]],val[fa[son[u]]],val[son[u]],val[son[son[u]]]$</p>
 <p>对于$val[u],val[fa[u]],val[fa[fa[u]]]$是确定的，我们直接单点修改即可，我们发现每个u的$son[u],son[son[u]]$的BFS序是靠在一起的，于是我们可以预处理出每个u和$son[u],son[son[u]]$和范围，对于修改兄弟节点，就修改$fa[u]$的儿子的区间.</p>
 <p>最后把树拓展到树加环上就好了。</p>
 <h3 id="code-2"><a href="#code-2" class="headerlink" title="code"></a>code</h3><pre><code class="lang-cpp">#include&lt;bits/stdc++.h&gt;

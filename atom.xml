@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-02-19T12:20:39.018Z</updated>
+  <updated>2020-02-22T12:07:01.052Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>人生格言</title>
+    <link href="/2020/02/22/%E4%BA%BA%E7%94%9F%E6%A0%BC%E8%A8%80/"/>
+    <id>/2020/02/22/人生格言/</id>
+    <published>2020-02-22T12:00:01.000Z</published>
+    <updated>2020-02-22T12:07:01.052Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;1.“现代人的崩溃是一种默不作声的崩溃。看起来很正常，会说笑，会打闹，会社交。表面平静，实际上心里的糟心事已经积累到一定程度了，不会摔门砸东西，不会流眼泪或歇斯底里。但可能某一秒就积累到极致了，也不说话，也不真的崩溃，也不太想活，也不敢去死。”——微博一只白&lt;/p&gt;
+&lt;p&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>致夏天</title>
@@ -45,7 +70,7 @@
     <link href="/2020/02/19/%E3%80%8CNOIP%E6%A8%A1%E6%8B%9F%E8%B5%9B-%E6%8D%8C%E3%80%8D%E9%A2%98%E8%A7%A3/"/>
     <id>/2020/02/19/「NOIP模拟赛-捌」题解/</id>
     <published>2020-02-19T11:43:23.000Z</published>
-    <updated>2020-02-20T11:41:37.559Z</updated>
+    <updated>2020-02-21T07:56:53.479Z</updated>
     
     <summary type="html">
     
@@ -114,33 +139,31 @@
   </entry>
   
   <entry>
-    <title>转载</title>
+    <title>介绍几种学霸都在用的超级笔记术</title>
     <link href="/2020/02/15/%E8%BD%AC%E8%BD%BD/"/>
     <id>/2020/02/15/转载/</id>
     <published>2020-02-15T14:41:09.000Z</published>
-    <updated>2020-02-16T02:05:09.013Z</updated>
+    <updated>2020-02-22T12:11:01.693Z</updated>
     
     <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;小伙伴们，大家好。&lt;/p&gt;
+&lt;p&gt;相信大家在学习备考以及学生工作中一定遇到过许多关于笔记的问题，比如：&lt;/p&gt;
+&lt;p&gt;怎样做笔记有助于思考？&lt;/p&gt;
+&lt;p&gt;如何做笔记有助于记忆？&lt;/p&gt;
+&lt;p&gt;怎样通过做笔记整理工作？&lt;/p&gt;
+&lt;p&gt;……&lt;/p&gt;
+&lt;p&gt;其实做笔记还真的是一
+        
+      
     
     </summary>
     
       <category term="转载" scheme="/categories/%E8%BD%AC%E8%BD%BD/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>生活</title>
-    <link href="/2020/02/15/%E7%94%9F%E6%B4%BB/"/>
-    <id>/2020/02/15/生活/</id>
-    <published>2020-02-15T14:39:16.000Z</published>
-    <updated>2020-02-16T02:05:00.486Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
   </entry>
