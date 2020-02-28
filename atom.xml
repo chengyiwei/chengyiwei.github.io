@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-02-22T12:07:01.052Z</updated>
+  <updated>2020-02-28T01:12:40.884Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VMware安装MacOS系统</title>
+    <link href="/2020/02/28/VMware%E5%AE%89%E8%A3%85MacOS%E7%B3%BB%E7%BB%9F/"/>
+    <id>/2020/02/28/VMware安装MacOS系统/</id>
+    <published>2020-02-28T00:49:04.000Z</published>
+    <updated>2020-02-28T01:12:40.884Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;安装前的准备&quot;&gt;&lt;a href=&quot;#安装前的准备&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="转载" scheme="/categories/%E8%BD%AC%E8%BD%BD/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>人生格言</title>
@@ -46,7 +70,7 @@
     <link href="/2020/02/19/%E3%80%8CNOIP%E6%A8%A1%E6%8B%9F%E8%B5%9B-%E6%8D%8C%E3%80%8D%E9%A2%98%E8%A7%A3/"/>
     <id>/2020/02/19/「NOIP模拟赛-捌」题解/</id>
     <published>2020-02-19T11:43:23.000Z</published>
-    <updated>2020-02-21T07:56:53.479Z</updated>
+    <updated>2020-02-28T01:13:19.664Z</updated>
     
     <summary type="html">
     
@@ -116,10 +140,10 @@
   
   <entry>
     <title>介绍几种学霸都在用的超级笔记术</title>
-    <link href="/2020/02/15/%E8%BD%AC%E8%BD%BD/"/>
-    <id>/2020/02/15/转载/</id>
+    <link href="/2020/02/15/%E4%BB%8B%E7%BB%8D%E5%87%A0%E7%A7%8D%E5%AD%A6%E9%9C%B8%E9%83%BD%E5%9C%A8%E7%94%A8%E7%9A%84%E8%B6%85%E7%BA%A7%E7%AC%94%E8%AE%B0%E6%9C%AF/"/>
+    <id>/2020/02/15/介绍几种学霸都在用的超级笔记术/</id>
     <published>2020-02-15T14:41:09.000Z</published>
-    <updated>2020-02-22T12:11:01.693Z</updated>
+    <updated>2020-02-28T01:20:23.658Z</updated>
     
     <summary type="html">
     

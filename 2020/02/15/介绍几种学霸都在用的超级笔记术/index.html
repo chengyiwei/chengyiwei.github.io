@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">「NOIP模拟赛 捌」题解 | Martian148</title>
+  <title itemprop="name">介绍几种学霸都在用的超级笔记术 | Martian148</title>
   
     <link rel="shortcut icon" href="https://static.runoob.com/images/favicon.ico">
   
@@ -361,11 +361,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4282338562,2192363778&amp;fm=26&amp;gp=0.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4282338562,2192363778&amp;fm=26&amp;gp=0.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(http://img0.imgtn.bdimg.com/it/u=3609929054,2184931472&amp;fm=26&amp;gp=0.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://img0.imgtn.bdimg.com/it/u=3609929054,2184931472&amp;fm=26&amp;gp=0.jpg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      「NOIP模拟赛 捌」题解</h1>
+      介绍几种学霸都在用的超级笔记术</h1>
       <p class="entry-census">
         <span>
           <a href="chengyiwei.github.io">
@@ -377,7 +377,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2020-2-19<span class="bull">
+        2020-2-15<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -391,279 +391,62 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h2 id="A-Digits"><a href="#A-Digits" class="headerlink" title="A.Digits"></a>A.Digits</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p> 给定$n$令$ i=\overline{x_{m}\cdots x_{1}x_{0} },n-i=\overline{y_{m}\cdots y_{1}y_{0} } $其中$x_i,y_i$分别是$i,n-i$的十进制表示，令$ f(i)=\sum_{i=0}^m x_i\times y_i $其中$x_i,y_i$都为0，求$\sum_{i=0}^n f(i) \bmod 10^9+7$</p>
-<h3 id="sol"><a href="#sol" class="headerlink" title="sol"></a>sol</h3><p>看到这么大的数据范围，自然而然就想到了数位DP，定义$F[i][j]$表示考虑完第$i-1$位，第$i$位是否被借位了，$j$是$0/1$。$g[i][j]$表示前$i-1$数字的个数$j$同样表示是否有被借位。</p>
-<p>于是转移方程就出来了 $F[i+1][flg]+=F[i][s]+g[i ][s] <em> j </em>(l+flg*10-j) $</p>
-<p>$g[i+1][flg]+=g[i][s]$</p>
-<p>$g$数组累计数字个数。</p>
-<p>显然答案就是$F[m+1][0]$，$m$是数字的个数。</p>
-<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><pre><code class="lang-cpp">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-typedef long long LL;
-const int TT=1e9+7;
-LL T,N,a[20],m,F[20][2],g[20][2];
-LL read(){
-    LL ret=0,f=1;char ch=getchar();
-    while(ch&lt;&#39;0&#39;||ch&gt;&#39;9&#39;){if(ch==&#39;-&#39;)f=-f;ch=getchar();}
-    while(ch&lt;=&#39;9&#39;&amp;&amp;ch&gt;=&#39;0&#39;)ret=ret*10+ch-&#39;0&#39;,ch=getchar();
-    return ret*f;
-}
-int main(){
-    T=read();
-    while(T--){
-        N=read();
-        m=-1;memset(a,0,sizeof a);memset(F,0,sizeof F);memset(g,0,sizeof g); 
-        while(N){a[++m]=N%10;N/=10;}
-        F[0][0]=0;g[0][0]=1;
-        for(int i=0;i&lt;=m;i++)
-            for(int s=0;s&lt;2;s++){
-                int l=a[i]-s;
-                for(int j=0;j&lt;=9;j++){
-                    int flg=(l&lt;j);
-                    (F[i+1][flg]+=F[i][s]+g[i][s]*j*(l+flg*10-j))%=TT;
-                    (g[i+1][flg]+=g[i][s])%=TT;
-                }
-            }
-        printf(&quot;%lld\n&quot;,F[m+1][0]);
-    }
-}
-</code></pre>
-<h2 id="B-Brew"><a href="#B-Brew" class="headerlink" title="B.Brew"></a>B.Brew</h2><h3 id="题面-1"><a href="#题面-1" class="headerlink" title="题面"></a>题面</h3><p> 有一以酿酒闻名的村庄，呈直线型分布，也就是说$n$ 户人家的地址都在一条数轴上以坐标标出 $x_i$，现在村里要建筑$K$座酿酒厂，同样分布在数轴上。定义建造的代价是每家到最近的酿酒厂的距离之和。求最小的代价。</p>
-<p>$1\leq n,K\leq 100000,1\leq x_i\leq 10^6$</p>
-<h3 id="sol-1"><a href="#sol-1" class="headerlink" title="sol"></a>sol</h3><p>此题不晓得怎么做，贴一个CXR大佬的代码</p>
-<h3 id="code-1"><a href="#code-1" class="headerlink" title="code"></a>code</h3><pre><code class="lang-cpp">#include&lt;bits/stdc++.h&gt;
-#define max(x,y) ((x)&gt;(y)?(x):(y))
-#define min(x,y) ((x)&lt;(y)?(x):(y))
-#define uint unsigned int
-#define LL long long
-#define ull unsigned long long
-#define swap(x,y) (x^=y,y^=x,x^=y)
-#define abs(x) ((x)&lt;0?-(x):(x))
-#define INF 1e18
-#define Inc(x,y) ((x+=y)&gt;=MOD&amp;&amp;(x-=MOD))
-#define N 100000
-#define GetCost(l,r) (f[l]+GetSum((l)+1,r)+Cost)
-#define Sum(l,r) (sum[r]-sum[(l)-1])
-using namespace std;
-LL n,m,Cost,a[N+5],sum[N+5],f[N+5],g[N+5];
-class FIO
-{
-    private:
-        #define Fsize 100000
-        #define tc() (FinNow==FinEnd&amp;&amp;(FinEnd=(FinNow=Fin)+fread(Fin,1,Fsize,stdin),FinNow==FinEnd)?EOF:*FinNow++)
-        #define pc(ch) (FoutSize&lt;Fsize?Fout[FoutSize++]=ch:(fwrite(Fout,1,FoutSize,stdout),Fout[(FoutSize=0)++]=ch))
-        LL f,FoutSize,OutputTop;char ch,Fin[Fsize],*FinNow,*FinEnd,Fout[Fsize],OutputStack[Fsize];
-    public:
-        FIO() {FinNow=FinEnd=Fin;}
-        inline void read(LL &amp;x) {x=0,f=1;while(!isdigit(ch=tc())) f=ch^&#39;-&#39;?1:-1;while(x=(x&lt;&lt;3)+(x&lt;&lt;1)+(ch&amp;15),isdigit(ch=tc()));x*=f;}
-        inline void read_char(char &amp;x) {while(isspace(x=tc()));}
-        inline void read_string(string &amp;x) {x=&quot;&quot;;while(isspace(ch=tc()));while(x+=ch,!isspace(ch=tc())) if(!~ch) return;}
-        inline void write(LL x) {if(!x) return (void)pc(&#39;0&#39;);if(x&lt;0) pc(&#39;-&#39;),x=-x;while(x) OutputStack[++OutputTop]=x%10+48,x/=10;while(OutputTop) pc(OutputStack[OutputTop]),--OutputTop;}
-        inline void write_char(char x) {pc(x);}
-        inline void write_string(string x) {register LL i,len=x.length();for(i=0;i&lt;len;++i) pc(x[i]);}
-        inline void end() {fwrite(Fout,1,FoutSize,stdout);}
-}F;
-inline LL GetSum(LL l,LL r)
-{
-    if(l&gt;r) return 0;
-    register LL mid=l+r&gt;&gt;1,ln=mid-l+1,rn=r-mid+1;
-    return (Sum(mid,r)-rn*a[mid])+(ln*a[mid]-Sum(l,mid));
-}
-class Class_Monotone_queue//单调队列
-{
-    private:
-        struct key
-        {
-            LL S,L,R;//L和R记录区间，S记录上次的转移点
-            key(LL x=0,LL y=0,LL z=0):S(x),L(y),R(z){}
-        }data[N+5];
-        LL H,T;
-    public:
-        inline void Clear() {data[H=T=1]=key(0,1,n);}//清空
-        inline bool empty() {return H&gt;T;}//判断队列是否为空
-        inline key Front() {return data[H];}//返回队首
-        inline key Back() {return data[T];}//返回队尾
-        inline void PushBack(key x) {data[++T]=x;}//在队尾加入一个元素
-        inline void PopFront() {++H;}//弹出队首
-        inline void PopBack() {--T;}//弹出队尾
-        inline void Push(LL x)//加入一个新的元素
-        {
-            register LL lst=-1,l,r,mid;
-            while(!empty())//只要队列不为空
-            {
-                if(GetCost(data[T].S,data[T].L)&gt;GetCost(x,data[T].L)) {lst=data[T].L,PopBack();continue;}//如果原先的斜率大于当前的斜率，就弹出队尾，并跳过当前循环
-                for(mid=(l=data[T].L)+(r=data[T].R)&gt;&gt;1;l&lt;=r;mid=l+r&gt;&gt;1) GetCost(data[T].S,mid)&gt;GetCost(x,mid)?r=mid-1:l=mid+1;//二分求出最早的从当前状态转移要优于原先状态转移的时刻
-                if(l&lt;=data[T].R) data[T].R=(lst=l)-1;//更新
-                break;//退出循环
-            }
-            if(~lst) PushBack(key(x,lst,n));//如果有值，将其加入队列
-            if(!empty()&amp;&amp;++data[H].L&gt;data[H].R) PopFront();//如果队首所表示区间为空，则将其弹出                  
-        }
-}q;
-inline bool check(LL C)//求出额外代价为C时的最优答案以及对应造酿酒厂的个数是否小于等于m
-{
-    Cost=C,q.Clear();//清空数组
-    for(register LL i=1;i&lt;=n;++i)//斜率优化DP 
-        f[i]=GetCost(q.Front().S,i),g[i]=g[q.Front().S]+1,q.Push(i);//计算出最优答案以及对应造酿酒厂的个数，然后将当前的i加入单调队列
-    return g[n]&lt;=m;//如果g[n]≤m则返回true
-}
-int main()
-{
-    register LL i,j,l,r,mid;
-    for(F.read(n),F.read(m),i=1;i&lt;=n;++i) F.read(a[i]);
-    for(sort(a+1,a+n+1),i=1;i&lt;=n;++i) sum[i]=sum[i-1]+a[i];
-    for(mid=(l=0)+(r=INF)&gt;&gt;1;l&lt;=r;mid=l+r&gt;&gt;1) check(mid)?r=mid-1:l=mid+1;//WQS二分
-    return check(l),F.write(f[n]-l*m),F.end(),0;//输出答案
-}
-</code></pre>
-<h2 id="C-QTree"><a href="#C-QTree" class="headerlink" title="C.QTree"></a>C.QTree</h2><h3 id="题面-2"><a href="#题面-2" class="headerlink" title="题面"></a>题面</h3><p> 一张由$n$ 个点，$n$ 条边构成的无重边无自环的带权无向连通图，需要支持以下操作： </p>
-<ul>
-<li>操作一：对与结点$u$距离不超过$k$的点（包括$u$）的权值加上d。</li>
-<li>操作二：询问与结点$u$距离不超过$k$的点（包括$u$）的权值和。</li>
-</ul>
-<p>初始权值为$0$</p>
-<p>$n\leq 100000,m\leq 100000,0\leq k\leq 2,-100\leq d \leq 100$</p>
-<h3 id="sol-2"><a href="#sol-2" class="headerlink" title="sol"></a>sol</h3><p>这道题有$n$条边和$n$条边，也就是说这个图是一个环加若干棵树，对于一棵树。我们要修改的是$val[u],val[fa[u]],val[fa[fa[u]]],val[fa[son[u]]],val[son[u]],val[son[son[u]]]$</p>
-<p>对于$val[u],val[fa[u]],val[fa[fa[u]]]$是确定的，我们直接单点修改即可，我们发现每个u的$son[u],son[son[u]]$的BFS序是靠在一起的，于是我们可以预处理出每个u和$son[u],son[son[u]]$和范围，对于修改兄弟节点，就修改$fa[u]$的儿子的区间.</p>
-<p>最后把树拓展到树加环上就好了。</p>
-<h3 id="code-2"><a href="#code-2" class="headerlink" title="code"></a>code</h3><pre><code class="lang-cpp">#include&lt;bits/stdc++.h&gt;
-#define SET 1,1,N
-#define V(x) (Sum(SET,bfn[x],bfn[x]))
-#define C(x,d) (Change(SET,bfn[x],bfn[x],d))
-#define S(x) (Sum(SET,Lson[x],Rson[x]))
-#define CS(x,d) (Change(SET,Lson[x],Rson[x],d))
-using namespace std;
-typedef long long ll;
-inline void write(ll x){x&lt;0?putchar(&#39;-&#39;),x=-x:x=x;int num[100]={0};num[0]+=!x;while (x) num[++num[0]]=x%10,x/=10;for (int i=num[0];i;i--) putchar(num[i]+&#39;0&#39;);puts(&quot;&quot;);}
-inline int read(){
-    int Res=0,f=1;char ch=getchar();
-    while (ch&gt;&#39;9&#39;||ch&lt;&#39;0&#39;) f=(ch==&#39;-&#39;?-f:f),ch=getchar();
-    while (ch&gt;=&#39;0&#39;&amp;&amp;ch&lt;=&#39;9&#39;) Res=Res*10+ch-&#39;0&#39;,ch=getchar();
-    return Res*f;
-}
-namespace MFS{
-    int fa[100005];
-    inline void init(int N){for (int i=1;i&lt;=N;i++) fa[i]=i;}
-    inline int getfa(int x){return fa[x]==x?x:fa[x]=getfa(fa[x]);}
-    inline bool merge(int x,int y){x=getfa(x);y=getfa(y);if (x!=y) fa[x]=y;return x==y;}
-}
-int N,M;
-int tot,lnk[100005],son[200005],nxt[200005],bfn[100005],fa[100005],bfs;
-int Lson[100005],Rson[100005],Lsson[100005],Rsson[100005],LNeb[100005],RNeb[100005];
-bool lop[100005];
-bool DFS(int x,int End,int fa){
-    if (x==End) return lop[x]=1;
-    for (int i=lnk[x];i;i=nxt[i]){
-        if (son[i]==fa) continue;
-        if (DFS(son[i],End,x)) RNeb[x]=son[i],LNeb[son[i]]=x,lop[x]=1;
-    }
-    return lop[x];
-}
-inline void add(int x,int y){son[++tot]=y;nxt[tot]=lnk[x];lnk[x]=tot;}
-queue&lt;int&gt;Que;
-struct ST{
-    ll x,lazy;
-}T[400005];
-inline void pushdown(int x,int L,int R){
-    ll &amp;l=T[x].lazy;int mid=(L+R)&gt;&gt;1;
-    if (l) T[x&lt;&lt;1].lazy+=l,T[x&lt;&lt;1|1].lazy+=l,T[x&lt;&lt;1].x+=l*(mid-L+1),T[x&lt;&lt;1|1].x+=l*(R-mid),l=0;
-}
-inline void Change(int p,int L,int R,int l,int r,int data){
-    if (l==2e9||r==-2e9) return ;
-    if (l&lt;=L&amp;&amp;R&lt;=r){T[p].lazy+=data;T[p].x+=data*(R-L+1);return ;}
-    int mid=(L+R)&gt;&gt;1;pushdown(p,L,R);
-    if (l&lt;=mid) Change(p&lt;&lt;1,L,mid,l,r,data);
-    if (mid&lt;r) Change(p&lt;&lt;1|1,mid+1,R,l,r,data);
-    T[p].x=T[p&lt;&lt;1].x+T[p&lt;&lt;1|1].x;
-}
-inline ll Sum(int p,int L,int R,int l,int r){
-    if (l==2e9||r==-2e9) return 0;
-    if (l&lt;=L&amp;&amp;R&lt;=r) return T[p].x;
-    int mid=(L+R)&gt;&gt;1;pushdown(p,L,R);ll Res=0;
-    if (l&lt;=mid) Res+=Sum(p&lt;&lt;1,L,mid,l,r);
-    if (mid&lt;r) Res+=Sum(p&lt;&lt;1|1,mid+1,R,l,r);
-    return Res;
-}
-inline ll calcNeb(int u,bool son,bool neb){
-    ll val=V(LNeb[u])+V(RNeb[u]);
-    if (son) if (LNeb[u]!=RNeb[u]) val+=S(LNeb[u])+S(RNeb[u]);else val+=S(LNeb[u]);
-    if (neb){
-        if (LNeb[LNeb[u]]==RNeb[u]) return val;
-        if (LNeb[LNeb[u]]==RNeb[RNeb[u]]) return val+V(LNeb[LNeb[u]]);
-        return val+V(LNeb[LNeb[u]])+V(RNeb[RNeb[u]]);
-    }
-    return val;
-}
-inline void changeNeb(int u,bool son,bool neb,int d){
-    C(LNeb[u],d),C(RNeb[u],d);
-    if (son) if (LNeb[u]!=RNeb[u]) CS(LNeb[u],d),CS(RNeb[u],d);else CS(LNeb[u],d);
-    if (neb){
-        if (LNeb[LNeb[u]]==RNeb[u]) return ;
-        if (LNeb[LNeb[u]]==RNeb[RNeb[u]]) C(LNeb[LNeb[u]],d);
-        else C(LNeb[LNeb[u]],d),C(RNeb[RNeb[u]],d);
-    }
-    return ;
-}
-int main()
-{
-    N=read();M=read();MFS::init(N);
-    for (int i=1;i&lt;=N;i++){
-        int x=read(),y=read();
-        if (MFS::merge(x,y)) LNeb[x]=y,RNeb[y]=x,DFS(x,y,0);
-        add(x,y);add(y,x);Lson[i]=Lsson[i]=2e9;Rson[i]=Rsson[i]=-2e9;
-    }
-    for (int i=1;i&lt;=N;i++) if (lop[i]) Que.push(i),bfn[i]=++bfs;
-    while (Que.size()){
-        int Now=Que.front();Que.pop();
-        for (int i=lnk[Now];i;i=nxt[i]){
-            if (bfn[son[i]]) continue;
-            fa[son[i]]=Now;Que.push(son[i]);bfn[son[i]]=++bfs;
-            Lson[Now]=min(Lson[Now],bfs);Lsson[fa[Now]]=min(Lsson[fa[Now]],bfs);
-            Rson[Now]=max(Rson[Now],bfs);Rsson[fa[Now]]=max(Rsson[fa[Now]],bfs);
-        }
-    }
-    for (int i=1;i&lt;=M;i++){
-        int op=read(),u=read(),k=read(),d;ll Ans=0;
-        if (op==1){
-            d=read();
-            if (!k) C(u,d);
-            if (k==1){
-                C(u,d);CS(u,d);
-                if (lop[u]) changeNeb(u,0,0,d);
-                else C(fa[u],d);
-            }
-            if (k==2){
-                CS(u,d);Change(SET,Lsson[u],Rsson[u],d);
-                if (lop[u]) C(u,d),changeNeb(u,1,1,d);
-                else{
-                    C(fa[u],d);CS(fa[u],d);
-                    if (lop[fa[u]]) changeNeb(fa[u],0,0,d);
-                    else C(fa[fa[u]],d);
-                }
-            }
-        }
-        else{
-            if (!k) Ans=V(u);
-            if (k==1){
-                Ans=V(u)+S(u);
-                if (lop[u]) Ans+=calcNeb(u,0,0);
-                else Ans+=V(fa[u]);
-            }
-            if (k==2){
-                Ans=S(u)+Sum(SET,Lsson[u],Rsson[u]);
-                if (lop[u]) Ans+=V(u),Ans+=calcNeb(u,1,1);
-                else {
-                    Ans+=V(fa[u])+S(fa[u]);
-                    if (lop[fa[u]]) Ans+=calcNeb(fa[u],0,0);
-                    else Ans+=V(fa[fa[u]]);
-                }
-            }
-            write(Ans);
-        }
-    }
-    return 0;
-}
-</code></pre>
+          <p>小伙伴们，大家好。</p>
+<p>相信大家在学习备考以及学生工作中一定遇到过许多关于笔记的问题，比如：</p>
+<p>怎样做笔记有助于思考？</p>
+<p>如何做笔记有助于记忆？</p>
+<p>怎样通过做笔记整理工作？</p>
+<p>……</p>
+<p>其实做笔记还真的是一门大学问呢！而很多学霸甚至企业管理者都有一套自己的笔记术，所以这次就分享一些好用的笔记术给大家~</p>
+<p><strong>▍**</strong>康奈尔笔记法**</p>
+<p>康奈尔笔记法，由康奈尔大学的Walter Pauk博士发明。这种记笔记的方法广泛运用于上课、读书、复习、记忆、会议记录等地方。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/10459112-9c3da85cff06e303?imageMogr2/auto-orient/strip|imageView2/2/w/660/format/webp" alt="img"></p>
+<p>图片来源《聪明人用方格笔记本》 </p>
+<p>康乃尔笔记法又称作做 5R 笔记术， 5R 笔记术从五个阶段来运用上面的三栏笔记格式，以工作笔记术的角度， 5R 笔记流程分别为：</p>
+<p>Record（记录）：在最大的笔记栏中先进行快速直接的记录与收集。</p>
+<p>Reduce（简化）：在左边较小的整理栏中把重点提炼出来。</p>
+<p>Recite（背诵）：透过重点与资料的对照，转化出可以执行的重点行动。</p>
+<p>Reflect（补充）：对整体策划有了瞭解后，在下方摘要栏做总结，或是延伸的补充。</p>
+<p>Review（复习）：这样一则以康乃尔笔记法写成的会议记录、策划笔记，可以让我们事后回顾与查找资料时更容易找到重点，但也同时能找到细节资料。</p>
+<p><strong>▍**</strong>东大笔记术**</p>
+<p>适用于学生和备考群体，清晰有逻辑。</p>
+<p>大多数东大录取生就是将笔记本的两页合并成一页使用，一页记录板书，另一页分别记录发现点和总结。</p>
+<p>板书就是上课的内容，发现点记录的是点评和疑问要点，总结是思考区域，也是这种笔记法的核心价值所在。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/10459112-2bcd509563cbb769?imageMogr2/auto-orient/strip|imageView2/2/w/720/format/webp" alt="img"></p>
+<p>图片来源：《聪明人用方格笔记本》 </p>
+<p><strong>▍**</strong>埃森哲笔记法**</p>
+<p>埃森哲公司是全球最大外资咨询管理公司，他们使用的是一种名为“Point Sheet”的格式，这个格式是工作领域最常用的笔记法，非常适用团队协作。</p>
+<p>左侧部分记录重点，提取工作的关键点，化整为零；右侧的部分则用来书写基于重点应采取的行动，即“谁、在什么时间之前、需要完成什么事”。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/10459112-460558c6a1e46670?imageMogr2/auto-orient/strip|imageView2/2/w/626/format/webp" alt="img"></p>
+<p> 图片来源：《聪明人用方格笔记本》 </p>
+<p><strong>▍**</strong>麦肯锡笔记法**</p>
+<p>麦肯锡公司是世界级领先的全球管理咨询公司，他们公司的咨询顾问们都会使用“空·雨·伞”框架，空即观察环境，雨即作出判断，伞即采取行动。</p>
+<p>其实这是一个解决问题的思维模型，在生活中的重大决策前可以试试这个笔记法。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/10459112-d60474664e464799?imageMogr2/auto-orient/strip|imageView2/2/w/689/format/webp" alt="img"></p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/10459112-8d29cd60d1d98b20?imageMogr2/auto-orient/strip|imageView2/2/w/689/format/webp" alt="img"></p>
+<p> 图片来源：《聪明人用方格笔记本》 </p>
+<p><strong>▍**</strong>黄金三分法（方格笔记术）**</p>
+<p>其实，仔细观看上述四种笔记法不难看出，这些笔记术都有一个通用的逻辑框架“黄金三分法”，因此这里我把黄金三分法配合使用方格笔记本也算作一种笔记术。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/10459112-db2f57e4c6957d02?imageMogr2/auto-orient/strip|imageView2/2/w/906/format/webp" alt="img"></p>
+<p> 图片来源：《聪明人用方格笔记本》 </p>
+<p><strong>▍**</strong>子弹笔记术**</p>
+<p>子弹笔记术也叫Bullet Journal ，由数码产品设计师Ryder Carroll 在2013年发明。</p>
+<p>一种通过简洁的符号系统解决任务/笔记收集、排序的高效率笔记法，并且可以根据自己的需求改造使用如手账、日记、打卡等不同的场景。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/10459112-31c1a1b437e40f48?imageMogr2/auto-orient/strip|imageView2/2/w/610/format/webp" alt="img"></p>
+<p> 图片来源：《子弹笔记》 </p>
+<p><strong>▍**</strong>大纲笔记术**</p>
+<p>大纲笔记术主要是利用关键词串连知识，增强记忆。</p>
+<p><strong>▍**</strong>Excel笔记术**</p>
+<p>哈哈哈，虽然貌似没有这个笔记术，不过相信大家都在用，所以这里也列出来了。</p>
+<p>大纲笔记术和Excel笔记术我之前在<a href="https://links.jianshu.com/go?to=http%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzg4NjAxMzI2MQ%3D%3D%26mid%3D2247484387%26idx%3D1%26sn%3Dbbcc8ce934eae14d418488cfcef7b3ec%26chksm%3Dcfa16fc1f8d6e6d765e0cfa1ad8a1dd9e32d734b1b1c681c9e19e2d46e3a3d83cda694e4270a%26scene%3D21%23wechat_redirect" target="_blank" rel="noopener">我的大学学习经验</a>中分享过，哈哈哈，我总用，很香，这里就不多说了。</p>
+<p><strong>▍**</strong>视觉（手绘）笔记术**</p>
+<p>视觉笔记术是混合了书写、版面设计、线条、手绘、简笔形状、视觉元素、箭头、方框、创意等元素的笔记表达形式。现今流行的思维导图、手帐等内容都可以说是一种视觉笔记的表达形式。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/10459112-036a130c575c9f98?imageMogr2/auto-orient/strip|imageView2/2/w/761/format/webp" alt="img"></p>
+<p> 图片来源：《视觉笔记术》 </p>
+<p>人脑对于知识的理解记忆其实经过了文字转图像的过程，而视觉笔记术是直接将图像呈现出来，所以帮助大脑节省了不少记忆难度，不过视觉笔记术做起来比较麻烦，很容易因为追求美观而浪费大量时间，所以我没有尝试过这种笔记术啦。实在感兴趣的小伙伴可以尝试一下。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/10459112-e65492bbb80bd324?imageMogr2/auto-orient/strip|imageView2/2/w/733/format/webp" alt="img"></p>
+<p>这次分享就到这里，大家可以针对各类笔记术的细节再查一下，这里也提供4本相关参考书籍《聪明人都用方格笔记本》等，在后台回复“笔记术”可获取。</p>
+<p>关键是要用起来啊~</p>
 
         </div>
         <!-- .entry-content -->
@@ -693,39 +476,22 @@ int main()
       <section class="post-squares nextprev">
         
           
-            <div class="post-nepre half previous">
+            <div class="post-nepre full previous">
           
-            <a href="/2020/02/22/人生格言/" rel="prev">
+            <a href="/2020/02/19/Codeforces游玩攻略/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://qiniuimg.qingmang.mobi/image/orion/6521837e3750e00409d3dce16672a3ad_640_456.jpeg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://qiniuimg.qingmang.mobi/image/orion/6521837e3750e00409d3dce16672a3ad_640_456.jpeg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://pic.vjshi.com/2018-04-13/ac0838621d3233fed47d6e144cbd5905/00004.jpg?x-oss-process=style/watermark" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://pic.vjshi.com/2018-04-13/ac0838621d3233fed47d6e144cbd5905/00004.jpg?x-oss-process=style/watermark">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                人生格言</h3>
+                Codeforces游玩攻略</h3>
                 <hr>
               </div>
             </a>
           </div>
         
-        
-          
-            <div class="post-nepre half next">
-          
-            <a href="/2020/02/19/免VIP-全网看各大视频站方法/" rel="next">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://img3.100bt.com/upload/ttq/20130420/1366453245538.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://img3.100bt.com/upload/ttq/20130420/1366453245538.jpg">
-              </div>
-              <span class="label">
-              Next Post</span>
-              <div class="info">
-                <h3>
-                免VIP-全网看各大视频站方法</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
         
       </section>
       
