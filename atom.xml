@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-03-18T03:58:58.649Z</updated>
+  <updated>2020-03-22T14:20:06.397Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>随想2020.3.22</title>
+    <link href="/2020/03/22/%E9%9A%8F%E6%83%B32020-3-22/"/>
+    <id>/2020/03/22/随想2020-3-22/</id>
+    <published>2020-03-22T14:17:44.000Z</published>
+    <updated>2020-03-22T14:20:06.397Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我最大的感触：&lt;/p&gt;
+&lt;p&gt;2020的疫情是中国经历的一大磨难，但是中国没有被压倒，过去的两个月，中国展现出了强大的民族凝聚力，用举世瞩目的效率和速度，走出了疫情的至暗时刻。期间，出现了一位位白衣天使，他们写下“不计报酬，无论生死”的请战书，转身走向抗疫一线。在国家的危难
+        
+      
+    
+    </summary>
+    
+      <category term="随想" scheme="/categories/%E9%9A%8F%E6%83%B3/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>OJ索引</title>
@@ -69,7 +94,7 @@
     <link href="/2020/02/22/%E4%BA%BA%E7%94%9F%E6%A0%BC%E8%A8%80/"/>
     <id>/2020/02/22/人生格言/</id>
     <published>2020-02-22T12:00:01.000Z</published>
-    <updated>2020-03-18T03:59:04.359Z</updated>
+    <updated>2020-03-22T14:18:27.559Z</updated>
     
     <summary type="html">
     
@@ -84,7 +109,7 @@
     
     </summary>
     
-      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="随想" scheme="/categories/%E9%9A%8F%E6%83%B3/"/>
     
     
   </entry>
