@@ -391,9 +391,9 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h2 id="A-Digits"><a href="#A-Digits" class="headerlink" title="A.Digits"></a>A.Digits</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p> 给定$n$令$ i=\overline{x_{m}\cdots x_{1}x_{0} },n-i=\overline{y_{m}\cdots y_{1}y_{0} } $其中$x_i,y_i$分别是$i,n-i$的十进制表示，令$ f(i)=\sum_{i=0}^m x_i\times y_i $其中$x_i,y_i$都为0，求$\sum_{i=0}^n f(i) \bmod 10^9+7$</p>
+          <h2 id="A-Digits"><a href="#A-Digits" class="headerlink" title="A.Digits"></a>A.Digits</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p> 给定$n$令$i=\overline{x_{m}\cdots x_{1}x_{0} },n-i=\overline{y_{m}\cdots y_{1}y_{0} }$其中$x_i,y_i$分别是$i,n-i$的十进制表示，令$f(i)=\sum_{i=0}^m x_i\times y_i$其中$x_i,y_i$都为0，求$\sum_{i=0}^n f(i) \bmod 10^9+7$</p>
 <h3 id="sol"><a href="#sol" class="headerlink" title="sol"></a>sol</h3><p>看到这么大的数据范围，自然而然就想到了数位DP，定义$F[i][j]$表示考虑完第$i-1$位，第$i$位是否被借位了，$j$是$0/1$。$g[i][j]$表示前$i-1$数字的个数$j$同样表示是否有被借位。</p>
-<p>于是转移方程就出来了 $F[i+1][flg]+=F[i][s]+g[i ][s] <em> j </em>(l+flg*10-j) $</p>
+<p>于是转移方程就出来了 $F[i+1][flg]+=F[i][s]+g[i ][s] <em> j </em>(l+flg*10-j)$</p>
 <p>$g[i+1][flg]+=g[i][s]$</p>
 <p>$g$数组累计数字个数。</p>
 <p>显然答案就是$F[m+1][0]$，$m$是数字的个数。</p>
