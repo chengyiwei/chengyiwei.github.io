@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-03-22T14:20:06.397Z</updated>
+  <updated>2020-03-25T13:12:25.585Z</updated>
   <id>/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="/2020/03/22/%E9%9A%8F%E6%83%B32020-3-22/"/>
     <id>/2020/03/22/随想2020-3-22/</id>
     <published>2020-03-22T14:17:44.000Z</published>
-    <updated>2020-03-22T14:20:06.397Z</updated>
+    <updated>2020-03-25T13:12:25.585Z</updated>
     
     <summary type="html">
     
@@ -36,7 +36,7 @@
     
     </summary>
     
-      <category term="随想" scheme="/categories/%E9%9A%8F%E6%83%B3/"/>
+      <category term="随笔" scheme="/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
   </entry>
@@ -70,7 +70,7 @@
     <link href="/2020/02/28/VMware%E5%AE%89%E8%A3%85MacOS%E7%B3%BB%E7%BB%9F/"/>
     <id>/2020/02/28/VMware安装MacOS系统/</id>
     <published>2020-02-28T00:49:04.000Z</published>
-    <updated>2020-03-18T03:58:53.031Z</updated>
+    <updated>2020-03-25T02:43:01.867Z</updated>
     
     <summary type="html">
     
@@ -84,7 +84,7 @@
     
     </summary>
     
-      <category term="转载" scheme="/categories/%E8%BD%AC%E8%BD%BD/"/>
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
   </entry>
@@ -119,7 +119,7 @@
     <link href="/2020/02/19/%E3%80%8CNOIP%E6%A8%A1%E6%8B%9F%E8%B5%9B-%E6%8D%8C%E3%80%8D%E9%A2%98%E8%A7%A3/"/>
     <id>/2020/02/19/「NOIP模拟赛-捌」题解/</id>
     <published>2020-02-19T11:43:23.000Z</published>
-    <updated>2020-03-18T23:46:02.968Z</updated>
+    <updated>2020-03-25T13:12:33.272Z</updated>
     
     <summary type="html">
     
@@ -133,7 +133,7 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="题解" scheme="/categories/%E9%A2%98%E8%A7%A3/"/>
     
     
   </entry>
@@ -143,7 +143,7 @@
     <link href="/2020/02/19/%E5%85%8DVIP-%E5%85%A8%E7%BD%91%E7%9C%8B%E5%90%84%E5%A4%A7%E8%A7%86%E9%A2%91%E7%AB%99%E6%96%B9%E6%B3%95/"/>
     <id>/2020/02/19/免VIP-全网看各大视频站方法/</id>
     <published>2020-02-19T11:43:23.000Z</published>
-    <updated>2020-03-18T03:59:07.830Z</updated>
+    <updated>2020-03-25T12:24:13.004Z</updated>
     
     <summary type="html">
     
@@ -157,7 +157,7 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="资源" scheme="/categories/%E8%B5%84%E6%BA%90/"/>
     
     
   </entry>
@@ -167,7 +167,7 @@
     <link href="/2020/02/19/Codeforces%E6%B8%B8%E7%8E%A9%E6%94%BB%E7%95%A5/"/>
     <id>/2020/02/19/Codeforces游玩攻略/</id>
     <published>2020-02-19T11:20:42.000Z</published>
-    <updated>2020-03-18T03:59:01.358Z</updated>
+    <updated>2020-03-25T12:31:17.913Z</updated>
     
     <summary type="html">
     
@@ -182,37 +182,7 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>介绍几种学霸都在用的超级笔记术</title>
-    <link href="/2020/02/15/%E4%BB%8B%E7%BB%8D%E5%87%A0%E7%A7%8D%E5%AD%A6%E9%9C%B8%E9%83%BD%E5%9C%A8%E7%94%A8%E7%9A%84%E8%B6%85%E7%BA%A7%E7%AC%94%E8%AE%B0%E6%9C%AF/"/>
-    <id>/2020/02/15/介绍几种学霸都在用的超级笔记术/</id>
-    <published>2020-02-15T14:41:09.000Z</published>
-    <updated>2020-03-18T03:59:10.425Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;小伙伴们，大家好。&lt;/p&gt;
-&lt;p&gt;相信大家在学习备考以及学生工作中一定遇到过许多关于笔记的问题，比如：&lt;/p&gt;
-&lt;p&gt;怎样做笔记有助于思考？&lt;/p&gt;
-&lt;p&gt;如何做笔记有助于记忆？&lt;/p&gt;
-&lt;p&gt;怎样通过做笔记整理工作？&lt;/p&gt;
-&lt;p&gt;……&lt;/p&gt;
-&lt;p&gt;其实做笔记还真的是一
-        
-      
-    
-    </summary>
-    
-      <category term="转载" scheme="/categories/%E8%BD%AC%E8%BD%BD/"/>
+      <category term="算法" scheme="/categories/%E7%AE%97%E6%B3%95/"/>
     
     
   </entry>
