@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CS61C Lab3 | Martian148&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+    <link rel="icon" href="/img/favicon.ico">
+    <meta name="description" content="Martian148的空间">
+    <meta name="keywords" content="martian的小站">
+    <meta name="baidu-site-verification" content="7F55weZDDc">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/assets/css/0.styles.54ae510b.css" as="style"><link rel="preload" href="/assets/js/app.f08b54a0.js" as="script"><link rel="preload" href="/assets/js/2.30da42f9.js" as="script"><link rel="preload" href="/assets/js/17.1c3740b3.js" as="script"><link rel="prefetch" href="/assets/js/10.9f81b4a3.js"><link rel="prefetch" href="/assets/js/100.881a7d7c.js"><link rel="prefetch" href="/assets/js/101.bb9ef1be.js"><link rel="prefetch" href="/assets/js/102.44d84490.js"><link rel="prefetch" href="/assets/js/103.edefc19c.js"><link rel="prefetch" href="/assets/js/104.72aa8c36.js"><link rel="prefetch" href="/assets/js/105.04c5a31c.js"><link rel="prefetch" href="/assets/js/106.e5e2fe7d.js"><link rel="prefetch" href="/assets/js/107.8379636b.js"><link rel="prefetch" href="/assets/js/108.2ecb2354.js"><link rel="prefetch" href="/assets/js/109.34458fd8.js"><link rel="prefetch" href="/assets/js/11.1a92502e.js"><link rel="prefetch" href="/assets/js/110.b831ed05.js"><link rel="prefetch" href="/assets/js/111.0e36e75c.js"><link rel="prefetch" href="/assets/js/112.b3ca423a.js"><link rel="prefetch" href="/assets/js/113.de5fd3e3.js"><link rel="prefetch" href="/assets/js/114.37dbbd1f.js"><link rel="prefetch" href="/assets/js/115.29144de8.js"><link rel="prefetch" href="/assets/js/116.a708fb86.js"><link rel="prefetch" href="/assets/js/117.99a5eec4.js"><link rel="prefetch" href="/assets/js/118.48243cef.js"><link rel="prefetch" href="/assets/js/119.dcbd0e5f.js"><link rel="prefetch" href="/assets/js/12.5a2023df.js"><link rel="prefetch" href="/assets/js/120.dc930c45.js"><link rel="prefetch" href="/assets/js/121.6c668755.js"><link rel="prefetch" href="/assets/js/122.28c85f7f.js"><link rel="prefetch" href="/assets/js/123.0fb3f9a0.js"><link rel="prefetch" href="/assets/js/124.013e534b.js"><link rel="prefetch" href="/assets/js/125.a7084a5a.js"><link rel="prefetch" href="/assets/js/126.ec288aa3.js"><link rel="prefetch" href="/assets/js/127.a592c1e3.js"><link rel="prefetch" href="/assets/js/128.24b4b4ce.js"><link rel="prefetch" href="/assets/js/129.b220e1f6.js"><link rel="prefetch" href="/assets/js/13.2e2cd897.js"><link rel="prefetch" href="/assets/js/130.0e5509b7.js"><link rel="prefetch" href="/assets/js/131.7243422b.js"><link rel="prefetch" href="/assets/js/132.d1e6bcca.js"><link rel="prefetch" href="/assets/js/133.a020b6bc.js"><link rel="prefetch" href="/assets/js/134.eb4e0a37.js"><link rel="prefetch" href="/assets/js/135.6484fa81.js"><link rel="prefetch" href="/assets/js/136.957979b8.js"><link rel="prefetch" href="/assets/js/137.50498a4c.js"><link rel="prefetch" href="/assets/js/138.01c955c3.js"><link rel="prefetch" href="/assets/js/139.89ebe846.js"><link rel="prefetch" href="/assets/js/14.08f8906b.js"><link rel="prefetch" href="/assets/js/140.be613c03.js"><link rel="prefetch" href="/assets/js/141.66f1526f.js"><link rel="prefetch" href="/assets/js/142.0e705382.js"><link rel="prefetch" href="/assets/js/143.7790c4c3.js"><link rel="prefetch" href="/assets/js/15.daae4993.js"><link rel="prefetch" href="/assets/js/16.c67b759f.js"><link rel="prefetch" href="/assets/js/18.c0ffa5d8.js"><link rel="prefetch" href="/assets/js/19.8403c3b6.js"><link rel="prefetch" href="/assets/js/20.1f164fe1.js"><link rel="prefetch" href="/assets/js/21.20666f53.js"><link rel="prefetch" href="/assets/js/22.2478898e.js"><link rel="prefetch" href="/assets/js/23.5fd880fe.js"><link rel="prefetch" href="/assets/js/24.20e2f93c.js"><link rel="prefetch" href="/assets/js/25.f6f306de.js"><link rel="prefetch" href="/assets/js/26.91a1ae5d.js"><link rel="prefetch" href="/assets/js/27.0ae1ed11.js"><link rel="prefetch" href="/assets/js/28.c3c04b51.js"><link rel="prefetch" href="/assets/js/29.a6280dc6.js"><link rel="prefetch" href="/assets/js/3.d6e261d3.js"><link rel="prefetch" href="/assets/js/30.8d4c4cce.js"><link rel="prefetch" href="/assets/js/31.a9411245.js"><link rel="prefetch" href="/assets/js/32.0bb144b8.js"><link rel="prefetch" href="/assets/js/33.89958c99.js"><link rel="prefetch" href="/assets/js/34.42670c40.js"><link rel="prefetch" href="/assets/js/35.85a3d3bd.js"><link rel="prefetch" href="/assets/js/36.d356bd11.js"><link rel="prefetch" href="/assets/js/37.808c82ad.js"><link rel="prefetch" href="/assets/js/38.e465ec53.js"><link rel="prefetch" href="/assets/js/39.45897b81.js"><link rel="prefetch" href="/assets/js/4.1acdcc39.js"><link rel="prefetch" href="/assets/js/40.53420e25.js"><link rel="prefetch" href="/assets/js/41.dfd43243.js"><link rel="prefetch" href="/assets/js/42.56cb8cf3.js"><link rel="prefetch" href="/assets/js/43.7f7aecc1.js"><link rel="prefetch" href="/assets/js/44.40f037ef.js"><link rel="prefetch" href="/assets/js/45.26bbff5d.js"><link rel="prefetch" href="/assets/js/46.ce470dad.js"><link rel="prefetch" href="/assets/js/47.b63a6e43.js"><link rel="prefetch" href="/assets/js/48.1ed653b1.js"><link rel="prefetch" href="/assets/js/49.06d47ecc.js"><link rel="prefetch" href="/assets/js/5.fd4db5ce.js"><link rel="prefetch" href="/assets/js/50.8933e51e.js"><link rel="prefetch" href="/assets/js/51.14135ff1.js"><link rel="prefetch" href="/assets/js/52.1fbd869a.js"><link rel="prefetch" href="/assets/js/53.c0e9bfd6.js"><link rel="prefetch" href="/assets/js/54.3bb81407.js"><link rel="prefetch" href="/assets/js/55.0e50b592.js"><link rel="prefetch" href="/assets/js/56.58ffc0af.js"><link rel="prefetch" href="/assets/js/57.328994ca.js"><link rel="prefetch" href="/assets/js/58.c85490bc.js"><link rel="prefetch" href="/assets/js/59.807c93c5.js"><link rel="prefetch" href="/assets/js/6.a93f9d99.js"><link rel="prefetch" href="/assets/js/60.c999a741.js"><link rel="prefetch" href="/assets/js/61.914b6bdb.js"><link rel="prefetch" href="/assets/js/62.b5904b88.js"><link rel="prefetch" href="/assets/js/63.016e19f2.js"><link rel="prefetch" href="/assets/js/64.9d757bf1.js"><link rel="prefetch" href="/assets/js/65.230dddfa.js"><link rel="prefetch" href="/assets/js/66.b146dc4b.js"><link rel="prefetch" href="/assets/js/67.29b27ac8.js"><link rel="prefetch" href="/assets/js/68.8df44825.js"><link rel="prefetch" href="/assets/js/69.8ffd658d.js"><link rel="prefetch" href="/assets/js/7.2f958b57.js"><link rel="prefetch" href="/assets/js/70.36e0d145.js"><link rel="prefetch" href="/assets/js/71.53e6867f.js"><link rel="prefetch" href="/assets/js/72.e719581f.js"><link rel="prefetch" href="/assets/js/73.d688029c.js"><link rel="prefetch" href="/assets/js/74.3060b229.js"><link rel="prefetch" href="/assets/js/75.4582962f.js"><link rel="prefetch" href="/assets/js/76.c25f4a6f.js"><link rel="prefetch" href="/assets/js/77.40c842e8.js"><link rel="prefetch" href="/assets/js/78.016e4001.js"><link rel="prefetch" href="/assets/js/79.ad1c0094.js"><link rel="prefetch" href="/assets/js/8.33b11656.js"><link rel="prefetch" href="/assets/js/80.0fa65d7d.js"><link rel="prefetch" href="/assets/js/81.a20568fa.js"><link rel="prefetch" href="/assets/js/82.46fbdd9a.js"><link rel="prefetch" href="/assets/js/83.d4b4f940.js"><link rel="prefetch" href="/assets/js/84.5b06d53d.js"><link rel="prefetch" href="/assets/js/85.6dbea092.js"><link rel="prefetch" href="/assets/js/86.83391288.js"><link rel="prefetch" href="/assets/js/87.18f0df87.js"><link rel="prefetch" href="/assets/js/88.f201c931.js"><link rel="prefetch" href="/assets/js/89.6b539665.js"><link rel="prefetch" href="/assets/js/9.1b6a0b60.js"><link rel="prefetch" href="/assets/js/90.93eccd2b.js"><link rel="prefetch" href="/assets/js/91.c49ad167.js"><link rel="prefetch" href="/assets/js/92.c87c2d05.js"><link rel="prefetch" href="/assets/js/93.017ab4ed.js"><link rel="prefetch" href="/assets/js/94.874e6af8.js"><link rel="prefetch" href="/assets/js/95.1c6cacb0.js"><link rel="prefetch" href="/assets/js/96.4c86bb59.js"><link rel="prefetch" href="/assets/js/97.700d4116.js"><link rel="prefetch" href="/assets/js/98.387d0277.js"><link rel="prefetch" href="/assets/js/99.089523c0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.54ae510b.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="Martian148's blog" class="logo"> <span class="site-name can-hide">Martian148's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机科学" class="dropdown-title"><a href="/cs/" class="link-title">计算机科学</a> <span class="title" style="display:none;">计算机科学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cs/ICPC-notes/" class="nav-link">ICPC 算法笔记</a></li><li class="dropdown-item"><!----> <a href="/cs/ICPC-solution/" class="nav-link">ICPC 算法题解</a></li><li class="dropdown-item"><!----> <a href="/pages/eeed19/" class="nav-link">体系结构</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数学" class="dropdown-title"><a href="/math/" class="link-title">数学</a> <span class="title" style="display:none;">数学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/7e8888/" class="nav-link">高等数学</a></li><li class="dropdown-item"><!----> <a href="/pages/a7bf6e/" class="nav-link">线性代数</a></li><li class="dropdown-item"><!----> <a href="/pages/77f439/" class="nav-link">概率论与数理统计</a></li><li class="dropdown-item"><!----> <a href="/pages/cb1830/" class="nav-link">具体数学</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/91d78e/" class="nav-link">Martian148的奇思妙想</a></li><li class="dropdown-item"><!----> <a href="/pages/964166/" class="nav-link">游记</a></li><li class="dropdown-item"><!----> <a href="/pages/9768eb/" class="nav-link">通识课笔记</a></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><a href="/pages/beb6c0bd8a66cea6/" class="link-title">收藏</a> <span class="title" style="display:none;">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/beb6c0bd8a66cea6/" class="nav-link">useful 网站</a></li><li class="dropdown-item"><!----> <a href="/friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://pic-1301573324.cos.ap-chengdu.myqcloud.com/20240731173832.png"> <div class="blogger-info"><h3>Martian148</h3> <span>一只热爱文科的理科生</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机科学" class="dropdown-title"><a href="/cs/" class="link-title">计算机科学</a> <span class="title" style="display:none;">计算机科学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cs/ICPC-notes/" class="nav-link">ICPC 算法笔记</a></li><li class="dropdown-item"><!----> <a href="/cs/ICPC-solution/" class="nav-link">ICPC 算法题解</a></li><li class="dropdown-item"><!----> <a href="/pages/eeed19/" class="nav-link">体系结构</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数学" class="dropdown-title"><a href="/math/" class="link-title">数学</a> <span class="title" style="display:none;">数学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/7e8888/" class="nav-link">高等数学</a></li><li class="dropdown-item"><!----> <a href="/pages/a7bf6e/" class="nav-link">线性代数</a></li><li class="dropdown-item"><!----> <a href="/pages/77f439/" class="nav-link">概率论与数理统计</a></li><li class="dropdown-item"><!----> <a href="/pages/cb1830/" class="nav-link">具体数学</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/91d78e/" class="nav-link">Martian148的奇思妙想</a></li><li class="dropdown-item"><!----> <a href="/pages/964166/" class="nav-link">游记</a></li><li class="dropdown-item"><!----> <a href="/pages/9768eb/" class="nav-link">通识课笔记</a></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><a href="/pages/beb6c0bd8a66cea6/" class="link-title">收藏</a> <span class="title" style="display:none;">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/beb6c0bd8a66cea6/" class="nav-link">useful 网站</a></li><li class="dropdown-item"><!----> <a href="/friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ACM - ICPC</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>编程语言</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>体系结构</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/eeed19/" class="sidebar-link">计算机组成原理笔记</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>CS61C</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/64eab7/" class="sidebar-link">RISC-V速查表</a></li><li><a href="/pages/9f1639/" class="sidebar-link">CS61C Lab1</a></li><li><a href="/pages/99922c/" class="sidebar-link">CS61C Lab2</a></li><li><a href="/pages/c008d1/" aria-current="page" class="active sidebar-link">CS61C Lab3</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>CSAPP</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Web</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>人工智能</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>计算机网络</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>编程工具</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><a href="/cs/#计算机科学" data-v-06225672>计算机科学</a></li><li data-v-06225672><a href="/cs/#体系结构" data-v-06225672>体系结构</a></li><li data-v-06225672><a href="/cs/#CS61C" data-v-06225672>CS61C</a></li></ul> <div class="info" data-v-06225672><div title="作者" class="author iconfont icon-touxiang" data-v-06225672><a href="https://github.com/chengyiwei" target="_blank" title="作者" class="beLink" data-v-06225672>martian148</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2025-05-09</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">CS61C Lab3<!----></h1> <!----> <div class="theme-vdoing-content content__default"><h1 id="lab-3"><a href="#lab-3" class="header-anchor">#</a> Lab 3</h1> <h3 id="exercise-1-familiarizing-yourself-with-venus"><a href="#exercise-1-familiarizing-yourself-with-venus" class="header-anchor">#</a> Exercise 1: Familiarizing yourself with Venus</h3> <ol><li>What do the <code>.data</code>, <code>.word</code>, <code>.text</code> directives mean (i.e. what do you use them for)? <strong>Hint</strong>: think about the 4 sections of memory.</li></ol> <p>这里提示我们了内存的四个部分</p> <p><code>.data</code> 表示内存数据上数据段的开始，</p> <p><code>.word 2, 4, 6, 8</code> 表示在内存中连续存储4个32位整数（2、4、6、8）</p> <p><code>n: .word 9</code> 定义了一个名为 <code>n</code> 的标签，指向一个值为9的32位整数，也就是 <code>n=9</code></p> <p><code>.text</code>表示代码段（text section）的开始。在这个段中，程序存放实际执行的机器指令（如函数、主程序等）。</p> <ol start="2"><li>Run the program to completion. What number did the program output? What does this number represent?</li></ol> <p>输出了 <span class="vuepress-eq"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>34</mn></mrow><annotation encoding="application/x-tex">34</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">4</span></span></span></span></span>，这个数字是 斐波那契数列的第 <span class="vuepress-eq"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn></mrow><annotation encoding="application/x-tex">9</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">9</span></span></span></span></span> 个</p> <ol start="3"><li>At what address is <code>n</code> stored in memory? <strong>Hint</strong>: Look at the contents of the registers.</li></ol> <p>通过观察寄存器 x28 我们可以得到 n 的地址是 <code>0x10000010</code></p> <ol start="4"><li>Without actually editing the code (i.e. without going into the “Editor” tab), have the program calculate the 13th fib number (0-indexed) by <em>manually</em> modifying the value of a register. You may find it helpful to first step through the code. If you prefer to look at decimal values, change the “Display Settings” option at the bottom.</li></ol> <p>答案是 <span class="vuepress-eq"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>233</mn></mrow><annotation encoding="application/x-tex">233</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">3</span><span class="mord">3</span></span></span></span></span></p> <h3 id="exercise-2-translating-from-c-to-risc-v"><a href="#exercise-2-translating-from-c-to-risc-v" class="header-anchor">#</a> Exercise 2: Translating from C to RISC-V</h3> <ul><li>The register representing the variable <code>k</code>.</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>t0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>The register representing the variable <code>sum</code>.</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>s0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>The registers acting as pointers to the <code>source</code> and <code>dest</code> arrays.</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>la s1, source
+la s2, dest
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ul><li>The assembly code for the loop found in the C code.</li></ul> <div class="language-c line-numbers-mode"><pre class="language-c"><code><span class="token keyword">for</span> <span class="token punctuation">(</span>k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> source<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    dest<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">fun</span><span class="token punctuation">(</span>source<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sum <span class="token operator">+=</span> dest<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>How the pointers are manipulated in the assembly code.</li></ul> <p>在汇编代码中，先通过 <code>la</code> 命令获取数组的首地址，然后通过 <code>add t1, s1, s3</code> 来获取到 <code>source[i]</code> 的值</p> <h3 id="exercise-3-factorial"><a href="#exercise-3-factorial" class="header-anchor">#</a> Exercise 3: Factorial</h3> <p>在这个 Exercise 中，需要实现一个函数计算阶乘</p> <div class="language-assembly line-numbers-mode"><pre class="language-text"><code>.globl factorial
+
+.data
+n: .word 10
+
+.text
+main:
+    la t0, n
+    lw a0, 0(t0)
+    jal ra, factorial
+
+    addi a1, a0, 0
+    addi a0, x0, 1
+    ecall # Print Result
+
+    addi a1, x0, '\n'
+    addi a0, x0, 11
+    ecall # Print newline
+
+    addi a0, x0, 10
+    ecall # Exit
+
+factorial:
+    # 需要实现一个函数计算阶乘
+    addi t0, x0, 1    # t0 = 1
+    addi t1, x0, 1    # t1 = 1
+    
+    addi t2, x0, 1
+    beq a0, t2, end  # if a0 == t2 end
+    beq a0, x0, end 
+
+loop:
+    mul t0, t0, t1 # t0 = t0 * t1
+    addi t1, t1, 1 # t1 += 1
+    bne t1, a0, loop # if t1 &lt;= n loop
+end:
+    mv a0, t0 # a0 = t0
+    ret
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><h3 id="exercise-4-calling-convention-checker"><a href="#exercise-4-calling-convention-checker" class="header-anchor">#</a> Exercise 4: Calling Convention Checker</h3> <p>这个练习需要你修复一个汇编代码，我们使用</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ java -jar tools/venus.jar -cc lab03/cc_test.s
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>命令能获得当前代码的一些问题</p> <div class="language-assembly line-numbers-mode"><pre class="language-text"><code>.globl simple_fn naive_pow inc_arr
+
+.data
+failure_message: .asciiz &quot;Test failed for some reason.\n&quot;
+success_message: .asciiz &quot;Sanity checks passed! Make sure there are no CC violations.\n&quot;
+array:
+    .word 1 2 3 4 5
+exp_inc_array_result:
+    .word 2 3 4 5 6
+
+.text
+main:
+    # We test our program by loading a bunch of random values
+    # into a few saved registers - if any of these are modified
+    # after these functions return, then we know calling
+    # convention was broken by one of these functions
+    li s0, 2623
+    li s1, 2910
+    # ... skipping middle registers so the file isn't too long
+    # If we wanted to be rigorous, we would add checks for
+    # s2-s20 as well
+    li s11, 134
+    # Now, we call some functions
+    # simple_fn: should return 1
+    jal simple_fn # Shorthand for &quot;jal ra, simple_fn&quot;
+    li t0, 1
+    bne a0, t0, failure
+    # naive_pow: should return 2 ** 7 = 128
+    li a0, 2
+    li a1, 7
+    jal naive_pow
+    li t0, 128
+    bne a0, t0, failure
+    # inc_arr: increments &quot;array&quot; in place
+    la a0, array
+    li a1, 5
+    jal inc_arr
+    jal check_arr # Verifies inc_arr and jumps to &quot;failure&quot; on failure
+    # Check the values in the saved registers for sanity
+    li t0, 2623
+    li t1, 2910
+    li t2, 134
+    bne s0, t0, failure
+    bne s1, t1, failure
+    bne s11, t2, failure
+    # If none of those branches were hit, print a message and exit normally
+    li a0, 4
+    la a1, success_message
+    ecall
+    li a0, 10
+    ecall
+
+# Just a simple function. Returns 1.
+#
+# FIXME Fix the reported error in this function (you can delete lines
+# if necessary, as long as the function still returns 1 in a0).
+simple_fn:
+    # mv a0, t0  
+    li a0, 1
+    ret
+
+# Computes a0 to the power of a1.
+# This is analogous to the following C pseudocode:
+#
+# uint32_t naive_pow(uint32_t a0, uint32_t a1) {
+#     uint32_t s0 = 1;
+#     while (a1 != 0) {
+#         s0 *= a0;
+#         a1 -= 1;
+#     }
+#     return s0;
+# }
+#
+# FIXME There's a CC error with this function!
+# The big all-caps comments should give you a hint about what's
+# missing. Another hint: what does the &quot;s&quot; in &quot;s0&quot; stand for?
+naive_pow:
+    # BEGIN PROLOGUE
+    # END PROLOGUE
+
+    addi sp, sp, -8
+    sw ra, 4(sp)
+    sw s0, 0(sp)
+    li s0, 1
+naive_pow_loop:
+    beq a1, zero, naive_pow_end
+    mul s0, s0, a0
+    addi a1, a1, -1
+    j naive_pow_loop
+naive_pow_end:
+    mv a0, s0
+    lw s0, 0(sp)
+    lw ra, 4(sp)
+    addi sp, sp, 8
+    ret
+
+# Increments the elements of an array in-place.
+# a0 holds the address of the start of the array, and a1 holds
+# the number of elements it contains.
+#
+# This function calls the &quot;helper_fn&quot; function, which takes in an
+# address as argument and increments the 32-bit value stored there.
+inc_arr:
+    addi sp, sp, -16
+    sw ra, 12(sp)
+    sw s0, 8(sp)
+    sw s1, 4(sp)
+
+    mv s0, a0 # Copy start of array to saved register
+    mv s1, a1 # Copy length of array to saved register
+    li t0, 0 # Initialize counter to 0
+inc_arr_loop:
+    beq t0, s1, inc_arr_end
+    slli t1, t0, 2 # Convert array index to byte offset
+    add a0, s0, t1 # Add offset to start of exp_inc_array_result
+
+    sw t0, 0(sp)
+    jal helper_fn
+    lw t0, 0(sp)
+
+    addi t0, t0, 1 # Increment counter
+    j inc_arr_loop
+inc_arr_end:
+    lw s1, 4(sp)
+    lw s0, 8(sp)
+    lw ra, 12(sp)
+    addi sp, sp, 16
+    ret
+
+# This helper function adds 1 to the value at the memory address in a0.
+# It doesn't return anything.
+# C pseudocode for what it does: &quot;*a0 = *a0 + 1&quot;
+#
+# FIXME This function also violates calling convention, but it might not
+# be reported by the Venus CC checker (try and figure out why).
+# You should fix the bug anyway by filling in the prologue and epilogue
+# as appropriate.
+helper_fn:
+    addi sp, sp, -8
+    sw ra, 4(sp)
+    sw s0, 0(sp)
+
+    lw t1, 0(a0)
+    addi s0, t1, 1
+    sw s0, 0(a0)
+    
+    lw s0, 0(sp)
+    lw ra, 4(sp)
+    addi sp, sp, 8
+    ret
+
+# YOU CAN IGNORE EVERYTHING BELOW THIS COMMENT
+
+# Checks the result of inc_arr, which should contain 2 3 4 5 6 after
+# one call.
+# You can safely ignore this function; it has no errors.
+check_arr:
+    la t0, exp_inc_array_result
+    la t1, array
+    addi t2, t1, 20 # Last element is 5*4 bytes off
+check_arr_loop:
+    beq t1, t2, check_arr_end
+    lw t3, 0(t0)
+    lw t4, 0(t1)
+    bne t3, t4, failure
+    addi t0, t0, 4
+    addi t1, t1, 4
+    j check_arr_loop
+check_arr_end:
+    ret
+    
+
+# This isn't really a function - it just prints a message, then
+# terminates the program on failure. Think of it like an exception.
+failure:
+    li a0, 4 # String print ecall
+    la a1, failure_message
+    ecall
+    li a0, 10 # Exit ecall
+    ecall
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br></div></div><ul><li>What caused the errors in <code>simple_fn</code>, <code>naive_pow</code>, and <code>inc_arr</code> that were reported by the Venus CC checker?</li></ul> <p>在 <code>simple_fn</code> 中，<span class="vuepress-eq"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">t_0</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 是调用者保存的，然而在函数中调用需要赋一个初值</p> <p>在 <code>naive_pow</code> 中，使用了 <code>s0</code>（保存寄存器），但未在函数开头保存它</p> <p>在 <code>inc_arr</code> 中，使用了 <code>s0</code> 和 <code>s1</code>（保存寄存器），但未保存它们。调用 <code>helper_fn</code> 前未保存临时寄存器 <code>t0</code>（虽然 <code>t0</code> 是临时寄存器，但跨函数调用时需手动保存）。</p> <ul><li>In RISC-V, we call functions by jumping to them and storing the return address in the <code>ra</code> register. Does calling convention apply to the jumps to the <code>naive_pow_loop</code> or <code>naive_pow_end</code> labels?
+在 RISC-V 中，我们通过跳转到函数并将返回地址存储在 <code>ra</code> 寄存器中来调用函数。调用约定是否适用于跳转到 <code>naive_pow_loop</code> 函数？ 或 <code>naive_pow_end</code> 标签？</li></ul> <p>不实用，<code>ra</code> 属于函数调用，而 <code>naive_pow_loop</code> 和 <code>naive_pow_end</code> 属于标签跳转</p> <ul><li>Why do we need to store <code>ra</code> in the prologue for <code>inc_arr</code>, but not in any other function?
+为什么我们需要将 <code>ra</code> 存储在 <code>inc_arr</code> 的序言中，而不是存储在任何其他函数中？</li></ul> <p>因为接下来需要调用 <code>helper_fn</code> 函数，必须在在开始的时候保存 <code>ra</code></p> <ul><li>Why wasn’t the calling convention error in <code>helper_fn</code> reported by the CC checker? (Hint: it’s mentioned above in the exercise instructions.)</li></ul> <p>不知道，不会，大佬教教</p> <h3 id="exercise-5-risc-v-function-calling-with-map"><a href="#exercise-5-risc-v-function-calling-with-map" class="header-anchor">#</a> Exercise 5: RISC-V function calling with <code>map</code></h3> <div class="language-assembly line-numbers-mode"><pre class="language-text"><code>.globl map
+
+.text
+main:
+    jal ra, create_default_list
+    add s0, a0, x0  # a0 = s0 is head of node list
+
+    #print the list
+    add a0, s0, x0
+    jal ra, print_list
+
+    # print a newline
+    jal ra, print_newline
+
+    # load your args
+    add a0, s0, x0  # load the address of the first node into a0
+
+    # load the address of the function in question into a1 (check out la on the green sheet)
+    la a1, square    # 加载 square 函数的地址到 a1
+
+    # issue the call to map
+    jal ra, map
+
+    # print the list
+    add a0, s0, x0
+    jal ra, print_list
+
+    # print another newline
+    jal ra, print_newline
+
+    addi a0, x0, 10
+    ecall #Terminate the program
+
+map:
+    # Prologue: Make space on the stack and back-up registers
+    addi sp, sp, -12    # 分配栈空间（保存 ra, s0, s1）
+    sw ra, 8(sp)        # 保存返回地址
+    sw s0, 4(sp)        # 保存 s0
+    sw s1, 0(sp)        # 保存 s1
+
+    beq a0, x0, done    # If we were given a null pointer (address 0), we're done.
+
+    add s0, a0, x0  # Save address of this node in s0
+    add s1, a1, x0  # Save address of function in s1
+
+    # load the value of the current node into a0
+    lw a0, 0(s0)    # 加载当前节点的值到 a0（作为函数参数）
+
+    # Call the function in question on that value. DO NOT use a label (be prepared to answer why).
+    jalr ra, s1, 0  # 调用函数（地址在 s1 中），结果存储在 a0
+
+    # store the returned value back into the node
+    sw a0, 0(s0)    # 将返回值存回当前节点的 value
+
+    # Load the address of the next node into a0
+    lw a0, 4(s0)    # 加载下一个节点的地址到 a0
+
+    # Put the address of the function back into a1 to prepare for the recursion
+    add a1, s1, x0  # 将函数地址从 s1 恢复到 a1
+
+    # recurse
+    jal ra, map     # 递归调用 map
+
+done:
+    # Epilogue: Restore register values and free space from the stack
+    lw s1, 0(sp)    # 恢复 s1
+    lw s0, 4(sp)    # 恢复 s0
+    lw ra, 8(sp)    # 恢复 ra
+    addi sp, sp, 12 # 释放栈空间
+    jr ra           # Return to caller
+
+square:
+    mul a0, a0, a0
+    jr ra
+
+# ... (其余代码保持不变)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br></div></div></div></div> <!----> <div class="page-edit"><!----> <!----> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/99922c/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">CS61C Lab2</div></a> <a href="/pages/8c9996/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">CSAPP 学习笔记</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/99922c/" class="prev">CS61C Lab2</a></span> <span class="next"><a href="/pages/8c9996/">CSAPP 学习笔记</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/fa9210/"><div>
+            计算机网络笔记
+            <!----></div></a> <span class="date">06-13</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/99ffeb/"><div>
+            LLM101 NLP学习笔记
+            <!----></div></a> <span class="date">06-02</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/ceec75/"><div>
+            《python科学计算入门》学习笔记
+            <!----></div></a> <span class="date">05-30</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:1485868106@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/chengyiwei" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/user/home?id=1413383674" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2024-2025
+    <span>Martian148 | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.f08b54a0.js" defer></script><script src="/assets/js/2.30da42f9.js" defer></script><script src="/assets/js/17.1c3740b3.js" defer></script>
+  </body>
+</html>

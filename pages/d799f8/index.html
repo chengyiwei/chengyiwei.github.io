@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git使用指南 | Martian148&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+    <link rel="icon" href="/img/favicon.ico">
+    <meta name="description" content="Martian148的空间">
+    <meta name="keywords" content="martian的小站">
+    <meta name="baidu-site-verification" content="7F55weZDDc">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/assets/css/0.styles.54ae510b.css" as="style"><link rel="preload" href="/assets/js/app.f08b54a0.js" as="script"><link rel="preload" href="/assets/js/2.30da42f9.js" as="script"><link rel="preload" href="/assets/js/26.91a1ae5d.js" as="script"><link rel="prefetch" href="/assets/js/10.9f81b4a3.js"><link rel="prefetch" href="/assets/js/100.881a7d7c.js"><link rel="prefetch" href="/assets/js/101.bb9ef1be.js"><link rel="prefetch" href="/assets/js/102.44d84490.js"><link rel="prefetch" href="/assets/js/103.edefc19c.js"><link rel="prefetch" href="/assets/js/104.72aa8c36.js"><link rel="prefetch" href="/assets/js/105.04c5a31c.js"><link rel="prefetch" href="/assets/js/106.e5e2fe7d.js"><link rel="prefetch" href="/assets/js/107.8379636b.js"><link rel="prefetch" href="/assets/js/108.2ecb2354.js"><link rel="prefetch" href="/assets/js/109.34458fd8.js"><link rel="prefetch" href="/assets/js/11.1a92502e.js"><link rel="prefetch" href="/assets/js/110.b831ed05.js"><link rel="prefetch" href="/assets/js/111.0e36e75c.js"><link rel="prefetch" href="/assets/js/112.b3ca423a.js"><link rel="prefetch" href="/assets/js/113.de5fd3e3.js"><link rel="prefetch" href="/assets/js/114.37dbbd1f.js"><link rel="prefetch" href="/assets/js/115.29144de8.js"><link rel="prefetch" href="/assets/js/116.a708fb86.js"><link rel="prefetch" href="/assets/js/117.99a5eec4.js"><link rel="prefetch" href="/assets/js/118.48243cef.js"><link rel="prefetch" href="/assets/js/119.dcbd0e5f.js"><link rel="prefetch" href="/assets/js/12.5a2023df.js"><link rel="prefetch" href="/assets/js/120.dc930c45.js"><link rel="prefetch" href="/assets/js/121.6c668755.js"><link rel="prefetch" href="/assets/js/122.28c85f7f.js"><link rel="prefetch" href="/assets/js/123.0fb3f9a0.js"><link rel="prefetch" href="/assets/js/124.013e534b.js"><link rel="prefetch" href="/assets/js/125.a7084a5a.js"><link rel="prefetch" href="/assets/js/126.ec288aa3.js"><link rel="prefetch" href="/assets/js/127.a592c1e3.js"><link rel="prefetch" href="/assets/js/128.24b4b4ce.js"><link rel="prefetch" href="/assets/js/129.b220e1f6.js"><link rel="prefetch" href="/assets/js/13.2e2cd897.js"><link rel="prefetch" href="/assets/js/130.0e5509b7.js"><link rel="prefetch" href="/assets/js/131.7243422b.js"><link rel="prefetch" href="/assets/js/132.d1e6bcca.js"><link rel="prefetch" href="/assets/js/133.a020b6bc.js"><link rel="prefetch" href="/assets/js/134.eb4e0a37.js"><link rel="prefetch" href="/assets/js/135.6484fa81.js"><link rel="prefetch" href="/assets/js/136.957979b8.js"><link rel="prefetch" href="/assets/js/137.50498a4c.js"><link rel="prefetch" href="/assets/js/138.01c955c3.js"><link rel="prefetch" href="/assets/js/139.89ebe846.js"><link rel="prefetch" href="/assets/js/14.08f8906b.js"><link rel="prefetch" href="/assets/js/140.be613c03.js"><link rel="prefetch" href="/assets/js/141.66f1526f.js"><link rel="prefetch" href="/assets/js/142.0e705382.js"><link rel="prefetch" href="/assets/js/143.7790c4c3.js"><link rel="prefetch" href="/assets/js/15.daae4993.js"><link rel="prefetch" href="/assets/js/16.c67b759f.js"><link rel="prefetch" href="/assets/js/17.1c3740b3.js"><link rel="prefetch" href="/assets/js/18.c0ffa5d8.js"><link rel="prefetch" href="/assets/js/19.8403c3b6.js"><link rel="prefetch" href="/assets/js/20.1f164fe1.js"><link rel="prefetch" href="/assets/js/21.20666f53.js"><link rel="prefetch" href="/assets/js/22.2478898e.js"><link rel="prefetch" href="/assets/js/23.5fd880fe.js"><link rel="prefetch" href="/assets/js/24.20e2f93c.js"><link rel="prefetch" href="/assets/js/25.f6f306de.js"><link rel="prefetch" href="/assets/js/27.0ae1ed11.js"><link rel="prefetch" href="/assets/js/28.c3c04b51.js"><link rel="prefetch" href="/assets/js/29.a6280dc6.js"><link rel="prefetch" href="/assets/js/3.d6e261d3.js"><link rel="prefetch" href="/assets/js/30.8d4c4cce.js"><link rel="prefetch" href="/assets/js/31.a9411245.js"><link rel="prefetch" href="/assets/js/32.0bb144b8.js"><link rel="prefetch" href="/assets/js/33.89958c99.js"><link rel="prefetch" href="/assets/js/34.42670c40.js"><link rel="prefetch" href="/assets/js/35.85a3d3bd.js"><link rel="prefetch" href="/assets/js/36.d356bd11.js"><link rel="prefetch" href="/assets/js/37.808c82ad.js"><link rel="prefetch" href="/assets/js/38.e465ec53.js"><link rel="prefetch" href="/assets/js/39.45897b81.js"><link rel="prefetch" href="/assets/js/4.1acdcc39.js"><link rel="prefetch" href="/assets/js/40.53420e25.js"><link rel="prefetch" href="/assets/js/41.dfd43243.js"><link rel="prefetch" href="/assets/js/42.56cb8cf3.js"><link rel="prefetch" href="/assets/js/43.7f7aecc1.js"><link rel="prefetch" href="/assets/js/44.40f037ef.js"><link rel="prefetch" href="/assets/js/45.26bbff5d.js"><link rel="prefetch" href="/assets/js/46.ce470dad.js"><link rel="prefetch" href="/assets/js/47.b63a6e43.js"><link rel="prefetch" href="/assets/js/48.1ed653b1.js"><link rel="prefetch" href="/assets/js/49.06d47ecc.js"><link rel="prefetch" href="/assets/js/5.fd4db5ce.js"><link rel="prefetch" href="/assets/js/50.8933e51e.js"><link rel="prefetch" href="/assets/js/51.14135ff1.js"><link rel="prefetch" href="/assets/js/52.1fbd869a.js"><link rel="prefetch" href="/assets/js/53.c0e9bfd6.js"><link rel="prefetch" href="/assets/js/54.3bb81407.js"><link rel="prefetch" href="/assets/js/55.0e50b592.js"><link rel="prefetch" href="/assets/js/56.58ffc0af.js"><link rel="prefetch" href="/assets/js/57.328994ca.js"><link rel="prefetch" href="/assets/js/58.c85490bc.js"><link rel="prefetch" href="/assets/js/59.807c93c5.js"><link rel="prefetch" href="/assets/js/6.a93f9d99.js"><link rel="prefetch" href="/assets/js/60.c999a741.js"><link rel="prefetch" href="/assets/js/61.914b6bdb.js"><link rel="prefetch" href="/assets/js/62.b5904b88.js"><link rel="prefetch" href="/assets/js/63.016e19f2.js"><link rel="prefetch" href="/assets/js/64.9d757bf1.js"><link rel="prefetch" href="/assets/js/65.230dddfa.js"><link rel="prefetch" href="/assets/js/66.b146dc4b.js"><link rel="prefetch" href="/assets/js/67.29b27ac8.js"><link rel="prefetch" href="/assets/js/68.8df44825.js"><link rel="prefetch" href="/assets/js/69.8ffd658d.js"><link rel="prefetch" href="/assets/js/7.2f958b57.js"><link rel="prefetch" href="/assets/js/70.36e0d145.js"><link rel="prefetch" href="/assets/js/71.53e6867f.js"><link rel="prefetch" href="/assets/js/72.e719581f.js"><link rel="prefetch" href="/assets/js/73.d688029c.js"><link rel="prefetch" href="/assets/js/74.3060b229.js"><link rel="prefetch" href="/assets/js/75.4582962f.js"><link rel="prefetch" href="/assets/js/76.c25f4a6f.js"><link rel="prefetch" href="/assets/js/77.40c842e8.js"><link rel="prefetch" href="/assets/js/78.016e4001.js"><link rel="prefetch" href="/assets/js/79.ad1c0094.js"><link rel="prefetch" href="/assets/js/8.33b11656.js"><link rel="prefetch" href="/assets/js/80.0fa65d7d.js"><link rel="prefetch" href="/assets/js/81.a20568fa.js"><link rel="prefetch" href="/assets/js/82.46fbdd9a.js"><link rel="prefetch" href="/assets/js/83.d4b4f940.js"><link rel="prefetch" href="/assets/js/84.5b06d53d.js"><link rel="prefetch" href="/assets/js/85.6dbea092.js"><link rel="prefetch" href="/assets/js/86.83391288.js"><link rel="prefetch" href="/assets/js/87.18f0df87.js"><link rel="prefetch" href="/assets/js/88.f201c931.js"><link rel="prefetch" href="/assets/js/89.6b539665.js"><link rel="prefetch" href="/assets/js/9.1b6a0b60.js"><link rel="prefetch" href="/assets/js/90.93eccd2b.js"><link rel="prefetch" href="/assets/js/91.c49ad167.js"><link rel="prefetch" href="/assets/js/92.c87c2d05.js"><link rel="prefetch" href="/assets/js/93.017ab4ed.js"><link rel="prefetch" href="/assets/js/94.874e6af8.js"><link rel="prefetch" href="/assets/js/95.1c6cacb0.js"><link rel="prefetch" href="/assets/js/96.4c86bb59.js"><link rel="prefetch" href="/assets/js/97.700d4116.js"><link rel="prefetch" href="/assets/js/98.387d0277.js"><link rel="prefetch" href="/assets/js/99.089523c0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.54ae510b.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="Martian148's blog" class="logo"> <span class="site-name can-hide">Martian148's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机科学" class="dropdown-title"><a href="/cs/" class="link-title">计算机科学</a> <span class="title" style="display:none;">计算机科学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cs/ICPC-notes/" class="nav-link">ICPC 算法笔记</a></li><li class="dropdown-item"><!----> <a href="/cs/ICPC-solution/" class="nav-link">ICPC 算法题解</a></li><li class="dropdown-item"><!----> <a href="/pages/eeed19/" class="nav-link">体系结构</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数学" class="dropdown-title"><a href="/math/" class="link-title">数学</a> <span class="title" style="display:none;">数学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/7e8888/" class="nav-link">高等数学</a></li><li class="dropdown-item"><!----> <a href="/pages/a7bf6e/" class="nav-link">线性代数</a></li><li class="dropdown-item"><!----> <a href="/pages/77f439/" class="nav-link">概率论与数理统计</a></li><li class="dropdown-item"><!----> <a href="/pages/cb1830/" class="nav-link">具体数学</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/91d78e/" class="nav-link">Martian148的奇思妙想</a></li><li class="dropdown-item"><!----> <a href="/pages/964166/" class="nav-link">游记</a></li><li class="dropdown-item"><!----> <a href="/pages/9768eb/" class="nav-link">通识课笔记</a></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><a href="/pages/beb6c0bd8a66cea6/" class="link-title">收藏</a> <span class="title" style="display:none;">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/beb6c0bd8a66cea6/" class="nav-link">useful 网站</a></li><li class="dropdown-item"><!----> <a href="/friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://pic-1301573324.cos.ap-chengdu.myqcloud.com/20240731173832.png"> <div class="blogger-info"><h3>Martian148</h3> <span>一只热爱文科的理科生</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机科学" class="dropdown-title"><a href="/cs/" class="link-title">计算机科学</a> <span class="title" style="display:none;">计算机科学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cs/ICPC-notes/" class="nav-link">ICPC 算法笔记</a></li><li class="dropdown-item"><!----> <a href="/cs/ICPC-solution/" class="nav-link">ICPC 算法题解</a></li><li class="dropdown-item"><!----> <a href="/pages/eeed19/" class="nav-link">体系结构</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数学" class="dropdown-title"><a href="/math/" class="link-title">数学</a> <span class="title" style="display:none;">数学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/7e8888/" class="nav-link">高等数学</a></li><li class="dropdown-item"><!----> <a href="/pages/a7bf6e/" class="nav-link">线性代数</a></li><li class="dropdown-item"><!----> <a href="/pages/77f439/" class="nav-link">概率论与数理统计</a></li><li class="dropdown-item"><!----> <a href="/pages/cb1830/" class="nav-link">具体数学</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/91d78e/" class="nav-link">Martian148的奇思妙想</a></li><li class="dropdown-item"><!----> <a href="/pages/964166/" class="nav-link">游记</a></li><li class="dropdown-item"><!----> <a href="/pages/9768eb/" class="nav-link">通识课笔记</a></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><a href="/pages/beb6c0bd8a66cea6/" class="link-title">收藏</a> <span class="title" style="display:none;">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/beb6c0bd8a66cea6/" class="nav-link">useful 网站</a></li><li class="dropdown-item"><!----> <a href="/friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ACM - ICPC</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>编程语言</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>体系结构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Web</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>人工智能</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>计算机网络</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>编程工具</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/d799f8/" aria-current="page" class="active sidebar-link">Git使用指南</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level2"><a href="/pages/d799f8/#介绍" class="sidebar-link">介绍</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#关于-git" class="sidebar-link">关于 Git</a></li><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#关于-github" class="sidebar-link">关于 GitHub</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/d799f8/#git-基本工作流" class="sidebar-link">Git 基本工作流</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#初始化仓库" class="sidebar-link">初始化仓库</a></li><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#查看仓库状态" class="sidebar-link">查看仓库状态</a></li><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#向暂存区中添加文件" class="sidebar-link">向暂存区中添加文件</a></li><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#保存仓库的历史记录" class="sidebar-link">保存仓库的历史记录</a></li><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#查看提交日志" class="sidebar-link">查看提交日志</a></li><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#查看更改前后的差别" class="sidebar-link">查看更改前后的差别</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/d799f8/#git-分支" class="sidebar-link">Git 分支</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#显示分支一览表" class="sidebar-link">显示分支一览表</a></li><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#创建、切换分支" class="sidebar-link">创建、切换分支</a></li><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#合并分支" class="sidebar-link">合并分支</a></li><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#以图表形式查看分支" class="sidebar-link">以图表形式查看分支</a></li><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#查看之前所有提交" class="sidebar-link">查看之前所有提交</a></li><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#回溯历史版本" class="sidebar-link">回溯历史版本</a></li><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#合并冲突" class="sidebar-link">合并冲突</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/d799f8/#与-github-交互" class="sidebar-link">与 GitHub 交互</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#添加远程仓库" class="sidebar-link">添加远程仓库</a></li><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#推送至远程仓库" class="sidebar-link">推送至远程仓库</a></li><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#从远程仓库获取" class="sidebar-link">从远程仓库获取</a></li><li class="sidebar-sub-header level3"><a href="/pages/d799f8/#获取最新的远程仓库分支" class="sidebar-link">获取最新的远程仓库分支</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/d799f8/#配置-ssh" class="sidebar-link">配置 SSH</a></li><li class="sidebar-sub-header level2"><a href="/pages/d799f8/#fork别人的仓库" class="sidebar-link">Fork别人的仓库</a></li><li class="sidebar-sub-header level2"><a href="/pages/d799f8/#参考资料" class="sidebar-link">参考资料</a></li></ul></li><li><a href="/pages/7109c7/" class="sidebar-link">Vim 使用指南</a></li><li><a href="/pages/551459/" class="sidebar-link">Makefile 使用指南</a></li><li><a href="/pages/bea718/" class="sidebar-link">valgrind 使用指南</a></li></ul></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><a href="/cs/#计算机科学" data-v-06225672>计算机科学</a></li><li data-v-06225672><a href="/cs/#编程工具" data-v-06225672>编程工具</a></li></ul> <div class="info" data-v-06225672><div title="作者" class="author iconfont icon-touxiang" data-v-06225672><a href="https://github.com/chengyiwei" target="_blank" title="作者" class="beLink" data-v-06225672>martian148</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2025-04-06</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">Git使用指南<!----></h1> <!----> <div class="theme-vdoing-content content__default"><h1 id="git-使用指南"><a href="#git-使用指南" class="header-anchor">#</a> Git 使用指南</h1> <h2 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h2> <h3 id="关于-git"><a href="#关于-git" class="header-anchor">#</a> 关于 Git</h3> <p>Git 是一种可以智能追踪文件中的更改的版本控制系统。 在你和一组人员同时对同一文件进行更改时，Git 的价值就体现出来了。</p> <p>通常，要在基于 Git 的工作流中执行此操作，需要：</p> <ul><li>为你（和协作者）正在处理的文件的主副本“创建分支”。</li> <li>在自己的个人分支上独立安全地对文件“进行编辑”。</li> <li>让 Git 智能地将特定更改“合并”回文件的主副本，从而确保更改不会影响其他人的更新。</li> <li>让 Git “跟踪”你和其他人的更改，这样就可以一直使用项目的最新版本。</li></ul> <h3 id="关于-github"><a href="#关于-github" class="header-anchor">#</a> 关于 GitHub</h3> <p>GitHub 是一种基于云的平台，可在其中存储、共享并与他人一起编写代码。</p> <p>通过将代码存储在 GitHub 上的“存储库”中，你可以：</p> <ul><li>“展示或共享”你的工作。</li> <li>持续“跟踪和管理”对代码的更改。</li> <li>让其他人“审查”你的代码，并提出改进建议。</li> <li>在共享的项目中开展“协作”，无需担心这些更改会在准备好集成更改之前影响协作者的工作。</li></ul> <p>协作式工作是 GitHub 最基本的功能之一，该功能由开源软件 Git 实现，而 GitHub 是以该软件为基础进行构建的。</p> <h2 id="git-基本工作流"><a href="#git-基本工作流" class="header-anchor">#</a> Git 基本工作流</h2> <h3 id="初始化仓库"><a href="#初始化仓库" class="header-anchor">#</a> 初始化仓库</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>git init
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>如果初始化成功，执行了<code>git init</code>命令的目录下就会生成<code>.git</code>目录。这个．git目录里存储着管理当前目录内容所需的仓库数据</p> <h3 id="查看仓库状态"><a href="#查看仓库状态" class="header-anchor">#</a> 查看仓库状态</h3> <p><code>git status</code></p> <p>这个命令非常常用，请务必牢记</p> <h3 id="向暂存区中添加文件"><a href="#向暂存区中添加文件" class="header-anchor">#</a> 向暂存区中添加文件</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>git add
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>如果只是用 Git 仓库的工作树创建了文件，那么该文件并不会被记入 Git 仓库的版本管理对象当中。因此我们用 <code>git status</code> 命令查看 README.md 文件时，它会显示在 Untracked files 里。</p> <p>要想让文件成为 Git 仓库的管理对象，就需要用git add命令将其加入暂存区（Stage或者Index）中。暂存区是提交之前的一个临时区域。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % touch README.md
+(base) martian148@Mac git_1 % git status
+位于分支 master
+
+尚无提交
+
+未跟踪的文件:
+  （使用 &quot;git add &lt;文件&gt;...&quot; 以包含要提交的内容）
+	README.md
+
+提交为空，但是存在尚未跟踪的文件（使用 &quot;git add&quot; 建立跟踪）
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git add README.md 
+(base) martian148@Mac git_1 % git status
+位于分支 master
+
+尚无提交
+
+要提交的变更：
+  （使用 &quot;git rm --cached &lt;文件&gt;...&quot; 以取消暂存）
+	新文件：   README.md
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>将 README.md 文件加入暂存区后，<code>git status</code> 命令的显示结果发生了变化。可以看到，README.md文件显示在Changes to be committed （提交的变更）中了。</p> <h3 id="保存仓库的历史记录"><a href="#保存仓库的历史记录" class="header-anchor">#</a> 保存仓库的历史记录</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>git commit
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>可以将当前暂存区中的文件实际保存到仓库的历史记录中。通过这些记录，我们就可以在工作树中复原文件。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git commit -m &quot;commit 1&quot;
+[master（根提交） c917196] commit 1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>m 参数后的 &quot;commit 1&quot; 称作提交信息，是对这个提交的概述。</p> <p>刚才我们只简洁地记述了一行提交信息，如果想要记述得更加详细，请不加 <code>-m</code>，直接执行<code>git commit</code>命令。执行后编辑器就会启动，并显示如下结果。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># 请为您的变更输入提交说明。以 '#' 开始的行将被忽略，而一个空的提交
+# 说明将会终止提交。
+#
+# 位于分支 master
+# 要提交的变更：
+#       删除：     README.md
+#
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>然后你依次输入以下信息：</p> <ul><li>第一行：一行文字简述修改内容</li> <li>第二行：空行</li> <li>第三行：记录更为详细的内容</li></ul> <p>这里的编辑是需要使用 vim 操作的</p> <p>执行完 <code>git commit</code> 命令后可以使用 <code>git status</code> 查看当前状态。</p> <h3 id="查看提交日志"><a href="#查看提交日志" class="header-anchor">#</a> 查看提交日志</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>git log
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>git log 命令可以查看以往仓库中提交的日志。包括可以查看什么人在什么时候进行了提交或合并，以及操作前后有怎样的差别</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git log
+commit e85d662b27b86e1d6693a71e9fec7c127d7b67d1 (HEAD -&gt; master)
+Author: chengyiwei-mac &lt;1485868106@qq.com&gt;
+Date:   Mon Apr 7 00:08:28 2025 +0800
+
+    commit 2
+    
+    delete README.md
+
+commit c91719612c44dfe4e3338a3917a546935dd2ee11
+Author: chengyiwei-mac &lt;1485868106@qq.com&gt;
+Date:   Mon Apr 7 00:05:06 2025 +0800
+
+    commit 1
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>可以看到我们的两次提交</p> <ul><li>commit 边上的 “c917196......” 是这个提交的哈希值，Git的其他命令中，在指向提交时会用到这个哈希值。</li> <li>Author 栏中显示我们给 Git 设置的用户名和邮箱地址</li> <li>Date栏中显示提交执行的日期和时间</li></ul> <p><strong>只显示提交信息的第一行</strong></p> <p>如果只想让程序显示第一行简述信息，可以在 <code>git log</code> 命令后加上 <code>--pretty=short</code>。这样一来开发人员就能够更轻松地把握多个提交。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git log --pretty=short
+
+commit e85d662b27b86e1d6693a71e9fec7c127d7b67d1 (HEAD -&gt; master)
+Author: chengyiwei-mac &lt;1485868106@qq.com&gt;
+
+    commit 2
+
+commit c91719612c44dfe4e3338a3917a546935dd2ee11
+Author: chengyiwei-mac &lt;1485868106@qq.com&gt;
+
+    commit 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p><strong>只显示指定目录、文件的日志</strong></p> <p>只要在 <code>git log</code> 命令后加上目录名，便会只显示该目录下的日志。如果加的是文件名，就会只显示与该文件相关的日志。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git log [文件名]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>如果你需要到历史记录里面去查，就需要加上 <code>--</code>，告诉 Git 我查的是历史里的路径，而不是当前工作区的路径。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git log -- README.md
+commit e85d662b27b86e1d6693a71e9fec7c127d7b67d1 (HEAD -&gt; master)
+Author: chengyiwei-mac &lt;1485868106@qq.com&gt;
+Date:   Mon Apr 7 00:08:28 2025 +0800
+
+    commit 2
+    
+    delete README.md
+
+commit c91719612c44dfe4e3338a3917a546935dd2ee11
+Author: chengyiwei-mac &lt;1485868106@qq.com&gt;
+Date:   Mon Apr 7 00:05:06 2025 +0800
+
+    commit 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="查看更改前后的差别"><a href="#查看更改前后的差别" class="header-anchor">#</a> 查看更改前后的差别</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>git diff
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><code>git diff</code> 命令可以查看工作树、暂存区、最新提交之间的差别（<strong>只显示已追踪文件的变化</strong>）。单从字面上可能很难理解，各位不妨跟着笔者的解说亲手试一试。</p> <p>我们再次创建 README.md，并写下标题</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># Git 教程
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git add README.md
+(base) martian148@Mac git_1 % git diff
+(base) martian148@Mac git_1 % git diff HEAD
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..81aaa8d
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,2 @@
++# Git 教程
++
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>第一次使用 <code>git diff</code> 没有返回时因为我们 <code>git add README.md</code> 之后工作树和暂存区之间并没有区别，加上 <code>HEAD</code> 之后就能查看和最新的提交之间的差别</p> <p>不妨养成这样一个好习惯：在执行git commit命令之前先执行git diff HEAD命令，查看本次提交与上次提交之间有什么差别，等确认完毕后再进行提交。这里的HEAD是指向当前分支中最新一次提交的指针。</p> <p>确认无误后我们使用 <code>git commit</code> 提交</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git commit -m &quot;insert Index&quot;
+[master 2c068fa] insert Index
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+(base) martian148@Mac git_1 % git log
+commit 2c068faea9ab880034ad5cb3cfd5434e8875c61a (HEAD -&gt; master)
+Author: chengyiwei-mac &lt;1485868106@qq.com&gt;
+Date:   Mon Apr 7 00:32:12 2025 +0800
+
+    insert Index
+
+commit e85d662b27b86e1d6693a71e9fec7c127d7b67d1
+Author: chengyiwei-mac &lt;1485868106@qq.com&gt;
+Date:   Mon Apr 7 00:08:28 2025 +0800
+
+    commit 2
+    
+    delete README.md
+
+commit c91719612c44dfe4e3338a3917a546935dd2ee11
+Author: chengyiwei-mac &lt;1485868106@qq.com&gt;
+Date:   Mon Apr 7 00:05:06 2025 +0800
+
+    commit 1
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><h2 id="git-分支"><a href="#git-分支" class="header-anchor">#</a> Git 分支</h2> <p>在进行多个并行作业时，我们会用到分支。在这类并行开发的过程中，往往同时存在多个最新代码状态。从master分支创建feature-A分支和fix-B分支后，每个分支中都拥有自己的最新代码。master分支是Git默认创建的分支，因此基本上所有开发都是以这个分支为中心进行的。</p> <p>不同分支中，可以同时进行完全不同的作业。等该分支的作业完成之后再与master分支合并。比如feature-A分支的作业结束后与master合并。</p> <p>通过灵活运用分支，可以让多人同时高效地进行并行开发。</p> <h3 id="显示分支一览表"><a href="#显示分支一览表" class="header-anchor">#</a> 显示分支一览表</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>git branch
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>可以看到master分支左侧标有“*”（星号），表示这是我们当前所在的分支。也就是说，我们正在master分支下进行开发。结果中没有显示其他分支名，表示本地仓库中只存在master一个分支。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git branch
+* master
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="创建、切换分支"><a href="#创建、切换分支" class="header-anchor">#</a> 创建、切换分支</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>git checkout -b
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>执行下面的命令，创建名为 feature-A 的分支</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git checkout -b feature-A
+切换到一个新分支 'feature-A'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>这时再来查看分支列表，会显示我们处于feature-A分支下。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git branch
+* feature-A
+  master
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>feature-A分支左侧标有 &quot;*&quot;，表示当前分支为feature-A。在这个状态下像正常开发那样修改代码、执行git add命令并进行提交的话，代码就会提交至feature-A分支。像这样不断对一个分支（例如feature-A）进行提交的操作，我们称为“培育分支”。</p> <p>下面来实际操作一下。在README.md文件中添加一行。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># Git教程
+
+ - feature-A
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>我们在 README.md 中添加了 feature-A 这样一行字母，然后进行提交。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git diff
+diff --git a/README.md b/README.md
+index 81aaa8d..69d9407 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,3 @@
+ # Git 教程
+ 
++- Feature -A
+(base) martian148@Mac git_1 % git add README.md 
+(base) martian148@Mac git_1 % git commit -m &quot;add feature-A&quot;
+[feature-A 6e91002] add feature-A
+ 1 file changed, 1 insertion(+)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>于是，这一行就添加到feature-A分支中了</p> <p><strong>切换到 master 分支</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git checkout master
+切换到分支 'master'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>然后查看 README.md 文件，会发现 README.md 文件仍然保持原先的状态，并没有被添加文字。feature-A 分支的更改不会影响到 master 分支，这正是在开发中创建分支的优点。只要创建多个分支，就可以在不互相影响的情况下同时进行多个功能的开发。</p> <p><strong>切换回上一个分支</strong></p> <p>现在切换回 feature-A 分支</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git checkout -
+切换到分支 'feature-A'
+(base) martian148@Mac git_1 % git branch
+* feature-A
+  master
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>像上面这样用 “-”（连字符）代替分支名，就可以切换至上一个分支。当然，将 “-” 替换成 feature-A 同样可以切换到 feature-A 分支。</p> <h3 id="合并分支"><a href="#合并分支" class="header-anchor">#</a> 合并分支</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>git merge
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>接下来，我们假设feature-A已经实现完毕，想要将它合并到主干分支master中。首先切换到master分支。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git checkout master
+切换到分支 'master'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>然后合并 feature-A 分支。为了在历史记录中明确记录下本次分支合并，我们需要创建合并提交。因此，在合并时加上<code>--no-ff</code> 参数。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git merge --no-ff feature-A
+Merge made by the 'ort' strategy.
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>这样一来，feature-A 分支的内容就合并到 master 分支中了。</p> <h3 id="以图表形式查看分支"><a href="#以图表形式查看分支" class="header-anchor">#</a> 以图表形式查看分支</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>git log --graph
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>用<code>git log --graph</code>命令进行查看的话，能很清楚地看到特性分支（feature-A）提交的内容已被合并。除此以外，特性分支的创建以及合并也都清楚明了。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git log --graph
+*   commit 78796c05775d58a610f94eda195e933fccf76484 (HEAD -&gt; master)
+|\  Merge: 2c068fa 6e91002
+| | Author: chengyiwei-mac &lt;1485868106@qq.com&gt;
+| | Date:   Mon Apr 7 13:14:14 2025 +0800
+| | 
+| |     Merge branch 'feature-A'
+| | 
+| * commit 6e9100227dc85b1f806633790bb082bc767dc1e4 (feature-A)
+|/  Author: chengyiwei-mac &lt;1485868106@qq.com&gt;
+|   Date:   Mon Apr 7 13:02:12 2025 +0800
+|   
+|       add feature-A
+| 
+* commit 2c068faea9ab880034ad5cb3cfd5434e8875c61a
+| Author: chengyiwei-mac &lt;1485868106@qq.com&gt;
+| Date:   Mon Apr 7 00:32:12 2025 +0800
+| 
+|     insert Index
+| 
+* commit e85d662b27b86e1d6693a71e9fec7c127d7b67d1
+| Author: chengyiwei-mac &lt;1485868106@qq.com&gt;
+| Date:   Mon Apr 7 00:08:28 2025 +0800
+| 
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><h3 id="查看之前所有提交"><a href="#查看之前所有提交" class="header-anchor">#</a> 查看之前所有提交</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>git reflog
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><code>git reflog</code> 能查看仓库所有的提交值，包括没有分支指向的提交</p> <h3 id="回溯历史版本"><a href="#回溯历史版本" class="header-anchor">#</a> 回溯历史版本</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>git reset --hard
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>Git 的另一特征便是可以灵活操作历史版本。借助分散仓库的优势，可以在不影响其他仓库的前提下对历史版本进行操作。</p> <p>我们先回溯历史版本，创建一个名为 fix-B 的特性分支</p> <p><strong>回溯到创建feature-A分支前</strong></p> <p>让我们先回溯到前面feature-A分支创建之前，创建一个名为fix-B的特性分支。</p> <p>要让仓库的HEAD、暂存区、当前工作树回溯到指定状态，需要用到 <code>git reset --hard</code> 命令。只要提供目标时间点的哈希值，就可以完全恢复至该时间点的状态。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git reset --hard [哈希值]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git reset 2c068faea9ab880034ad5cb3cfd5434e8875c61a 
+重置后取消暂存的变更：
+M	README.md
+(base) martian148@Mac git_1 % git log --graph
+* commit 2c068faea9ab880034ad5cb3cfd5434e8875c61a (HEAD -&gt; master)
+| Author: chengyiwei-mac &lt;1485868106@qq.com&gt;
+| Date:   Mon Apr 7 00:32:12 2025 +0800
+| 
+|     insert Index
+| 
+* commit e85d662b27b86e1d6693a71e9fec7c127d7b67d1
+| Author: chengyiwei-mac &lt;1485868106@qq.com&gt;
+| Date:   Mon Apr 7 00:08:28 2025 +0800
+| 
+|     commit 2
+|     
+|     delete README.md
+| 
+* commit c91719612c44dfe4e3338a3917a546935dd2ee11
+  Author: chengyiwei-mac &lt;1485868106@qq.com&gt;
+  Date:   Mon Apr 7 00:05:06 2025 +0800
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p>我们已经成功回溯到特性分支（feature-A）创建之前的状态。由于所有文件都回溯到了指定哈希值对应的时间点上，README.md文件的内容也恢复到了当时的状态。</p> <p><strong>创建 fix-B 分支</strong></p> <p>现在我们来创建特性分支（fix-B）</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git checkout -b &quot;fix-B&quot;
+
+切换到一个新分支 'fix-B'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>我们在README.md文件中添加一行文字 fix-B</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># Git教程
+
+  - fix-B
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>然后直接提交README.md文件。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git add .
+(base) martian148@Mac git_1 % git commit -m &quot;fix-B&quot;
+[fix-B 825ac42] fix-B
+ 1 file changed, 1 insertion(+)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>接下来我们的目标主干分支合并 feature-A 分支的修改后，又合并了 fix-B 的修改。</p> <p><strong>推进至 feature-A 分支合并后的状态</strong></p> <p>首先恢复到feature-A分支合并后的状态。不妨称这一操作为“推进历史”。</p> <p>git log 命令只能查看以当前状态为终点的历史日志，可以加上参数 <code>--all</code>，也可以加上格式化让提交更树更美观</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git log --oneline --graph --all --decorate
+
+* 825ac42 (HEAD -&gt; fix-B) fix-B
+| * 6e91002 (feature-A) add feature-A
+|/  
+* 2c068fa (master) insert Index
+* e85d662 commit 2
+* c917196 commit 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><ul><li><code>--graph</code> 画出 ASCII 的分支图</li> <li><code>--all</code> 显示所有分支的提交记录</li> <li><code>--oneline</code> 每个提交一行显示</li> <li><code>--decorate</code> 显示分支、标签等指针信息</li></ul> <p>我们将HEAD、暂存区、工作树恢复到这个 feature-A 时间点的状态</p> <p>我要先执行 <code>git checkout</code> 把 HEAD 移动到 master 位置，然后把 master 推动到 featrue-A 的位置</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git reset --hard 6e91002
+HEAD 现在位于 6e91002 add feature-A
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="合并冲突"><a href="#合并冲突" class="header-anchor">#</a> 合并冲突</h3> <p>我们现在有两个分支 <code>feature-A</code> 和 <code>fix-B</code>，我们尝试合并这两个分支</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git log --graph --oneline --decorate --all
+* 825ac42 (fix-B) fix-B
+| * 6e91002 (HEAD -&gt; master, feature-A) add feature-A
+|/  
+* 2c068fa insert Index
+* e85d662 commit 2
+* c917196 commit 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git merge --no-ff fix-B 
+自动合并 README.md
+冲突（内容）：合并冲突于 README.md
+自动合并失败，修正冲突然后提交修正的结果
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>这里系统提示我们产生了合并冲突，不解决冲突就无法完成合并，所以我们打开README.md文件，解决这个冲突。</p> <p>打开编译器，会发现 README.md 文件变成了这个样子：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># Git 教程
+
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+- Feature -A
+=======
+- fix -B
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; fix-B
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>=======以上的部分是当前HEAD的内容，以下的部分是要合并的fix-B分支中的内容。我们在编辑器中将其改成想要的样子。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># Git 教程
+
+
+- Feature -A
+
+- fix -B
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><strong>提交解决后的结果</strong></p> <p>冲突解决后，执行git add命令与git commit命令。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git add README.md
+(base) martian148@Mac git_1 % git commit -m &quot;fix conflict&quot;
+[master ff533db] fix conflict
+(base) martian148@Mac git_1 % git log --graph --oneline --decorate --all
+*   ff533db (HEAD -&gt; master) fix conflict
+|\  
+| * c093351 (fix-B) fix-B
+| * 825ac42 fix-B
+* | 6e91002 (feature-A) add feature-A
+|/  
+* 2c068fa insert Index
+* e85d662 commit 2
+* c917196 commit 1
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="与-github-交互"><a href="#与-github-交互" class="header-anchor">#</a> 与 GitHub 交互</h2> <h3 id="添加远程仓库"><a href="#添加远程仓库" class="header-anchor">#</a> 添加远程仓库</h3> <p>Git是分散型版本管理系统，但我们前面所学习的，都是针对单一本地仓库的操作。下面，我们将开始接触远在网络另一头的远程仓库。远程仓库顾名思义，是与我们本地仓库相对独立的另一个仓库。让我们先在GitHub上创建一个仓库，并将其设置为本地仓库的远程仓库。</p> <p>为防止与其他仓库混淆，仓库名请与本地仓库保持一致，即git-tutorial。创建时请不要勾选Initialize this repository with a README选项。因为一旦勾选该选项，GitHub一侧的仓库就会自动生成README文件，从创建之初便与本地仓库失去了整合性。虽然到时也可以强制覆盖，但为防止这一情况发生还是建议不要勾选该选项，直接点击 Create repository 创建仓库。</p> <p>我的 GitHub 用户名是 chengyiwei，创建了 git_test 仓库</p> <p>使用 <code>git remote add</code> 命令将它设置为本地仓库的远程仓库</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git remote add origin git@github.com:chengyiwei/git_test.git
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>执行完之后，Git 会自动将 <code>git@github.com:chengyiwei/git_test.git</code> 远程仓库的名称设置为 origin（标识符）</p> <h3 id="推送至远程仓库"><a href="#推送至远程仓库" class="header-anchor">#</a> 推送至远程仓库</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>git push
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><strong>推送至master分支</strong></p> <p>如果想将当前分支下本地仓库中的内容推送给远程仓库，需要用到 <code>git push</code> 命令。现在假定我们在master分支下进行操作。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git push -u origin master
+枚举对象中: 18, 完成.
+对象计数中: 100% (18/18), 完成.
+使用 8 个线程进行压缩
+压缩对象中: 100% (7/7), 完成.
+写入对象中: 100% (18/18), 1.37 KiB | 1.37 MiB/s, 完成.
+总共 18（差异 1），复用 0（差异 0），包复用 0（来自  0 个包）
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:chengyiwei/git_test.git
+ * [new branch]      master -&gt; master
+分支 'master' 设置为跟踪 'origin/master'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>像这样执行git push命令，当前分支的内容就会被推送给远程仓库origin的master分支。</p> <p><code>-u</code> 参数是告诉本地本地分支和远程分支的追踪关系（upstream），相当于把 origin 和 master 绑定了，下次如果我再执行 <code>git push</code> 操作就不用手动指定远程分支，否则每次都需要输入 <code>git push origin master</code>，后面使用 <code>git pull</code> Git 也知道拉去到哪里</p> <p><strong>推送至master以外的分支</strong></p> <p>除了master分支之外，远程仓库也可以创建其他分支。举个例子，我们在本地仓库中创建feature-D分支，并将它以同名形式push至远程仓库。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git checkout -b &quot;feature-D&quot;
+切换到一个新分支 'feature-D'
+(base) martian148@Mac git_1 % git branch
+  feature-A
+* feature-D
+  fix-B
+  master
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_1 % git push -u origin feature-D
+总共 0（差异 0），复用 0（差异 0），包复用 0（来自  0 个包）
+remote: 
+remote: Create a pull request for 'feature-D' on GitHub by visiting:
+remote:      https://github.com/chengyiwei/git_test/pull/new/feature-D
+remote: 
+To github.com:chengyiwei/git_test.git
+ * [new branch]      feature-D -&gt; feature-D
+分支 'feature-D' 设置为跟踪 'origin/feature-D'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><img src="https://pic-1301573324.cos.ap-chengdu.myqcloud.com/image-20250407221029833.png" alt="image-20250407221029833" style="zoom:50%;"> <p>现在我们可以从 GitHub 页面看到 feature-D 分支了</p> <h3 id="从远程仓库获取"><a href="#从远程仓库获取" class="header-anchor">#</a> 从远程仓库获取</h3> <div class="language-1 line-numbers-mode"><pre class="language-text"><code>git clone
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>现在我们切换一个目录，从 GitHub 上 clone 这个仓库到本地</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_2 %  git clone git@github.com:chengyiwei/git_test.git
+正克隆到 'git_test'...
+remote: Enumerating objects: 18, done.
+remote: Counting objects: 100% (18/18), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 18 (delta 1), reused 18 (delta 1), pack-reused 0 (from 0)
+接收对象中: 100% (18/18), 完成.
+处理 delta 中: 100% (1/1), 完成.
+(base) martian148@Mac git_2 % cd git_test 
+(base) martian148@Mac git_test %   
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>执行git clone命令后我们会默认处于master分支下，同时系统会自动将origin设置成该远程仓库的标识符。也就是说，当前本地仓库的master分支与GitHub端远程仓库（origin）的master分支在内容上是完全相同的。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_test % git branch -a 
+* master
+  remotes/origin/HEAD -&gt; origin/master
+  remotes/origin/feature-D
+  remotes/origin/master
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>通过 <code>git branch -a</code>指令可以显示本地仓库和远程仓库的分支信息</p> <p><strong>获取远程的feature-D分支</strong></p> <p>我们试着将feature-D分支获取至本地仓库。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_test % git branch -a
+* feature-D
+  master
+  remotes/origin/HEAD -&gt; origin/master
+  remotes/origin/feature-D
+  remotes/origin/master
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><code>-b</code> 参数的后面是本地仓库中新建分支的名称。为了便于理解，我们仍将其命名为 feature-D，让它与远程仓库的对应分支保持同名。新建分支名称后面是获取来源的分支名称。例子中指定了origin/feature-D，就是说以名为origin的仓库（这里指GitHub端的仓库）的feature-D分支为来源，在本地仓库中创建feature-D分支。</p> <p><strong>向本地的feature-D分支提交更改</strong></p> <p>现在假定我们是另一名开发者，要做一个新的提交。在README. md文件中添加一行文字</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># Git 教程
+
+
+- Feature -A
+
+- fix -B
+
+- feature - D
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_test % git diff
+diff --git a/README.md b/README.md
+index d1e0242..2a97f63 100644
+--- a/README.md
++++ b/README.md
+@@ -4,3 +4,5 @@
+ - Feature -A
+ 
+ - fix -B
++
++- feature - D
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>提交 feature-D 分支</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_test % git add .
+(base) martian148@Mac git_test % git commit -m &quot;add feature-D&quot;
+[feature-D c0373a7] add feature-D
+ 1 file changed, 2 insertions(+)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>推送feature-D分支</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(base) martian148@Mac git_test % git add .
+(base) martian148@Mac git_test % git commit -m &quot;add feature-D&quot;
+[feature-D c0373a7] add feature-D
+ 1 file changed, 2 insertions(+)
+(base) martian148@Mac git_test % git push
+枚举对象中: 5, 完成.
+对象计数中: 100% (5/5), 完成.
+使用 8 个线程进行压缩
+压缩对象中: 100% (2/2), 完成.
+写入对象中: 100% (3/3), 287 字节 | 287.00 KiB/s, 完成.
+总共 3（差异 0），复用 0（差异 0），包复用 0（来自  0 个包）
+To github.com:chengyiwei/git_test.git
+   ff533db..c0373a7  feature-D -&gt; feature-D
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>从远程仓库获取feature-D分支 <span class="vuepress-eq"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span></span> 在本地仓库中提交更改 <span class="vuepress-eq"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span></span> 再将feature-D分支推送回远程仓库</p> <p>通过这一系列操作，就可以与其他开发者相互合作，共同培育feature-D分支，实现某些功能。</p> <h3 id="获取最新的远程仓库分支"><a href="#获取最新的远程仓库分支" class="header-anchor">#</a> 获取最新的远程仓库分支</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>git pull
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>我们回到最早的那个目录，可以从远端拉取 feature-D</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ git pull origin feature-D
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+展开对象中: 100% (3/3), 267 字节 | 89.00 KiB/s, 完成.
+来自 github.com:chengyiwei/git_test
+ * branch            feature-D  -&gt; FETCH_HEAD
+   ff533db..c0373a7  feature-D  -&gt; origin/feature-D
+更新 ff533db..c0373a7
+Fast-forward
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>GitHub端远程仓库中的feature-D分支是最新状态，所以本地仓库中的feature-D分支就得到了更新。今后只需要像平常一样在本地进行提交再push给远程仓库，就可以与其他开发者同时在同一个分支中进行作业，不断给feature-D增加新功能。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git fetch
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="custom-block warning"><p class="custom-block-title">提问？</p> <p><code>git fetch</code> 和 <code>git pull</code> 的区别 ?</p></div> <details class="custom-block details"><summary>点击查看</summary> <table><thead><tr><th>命令</th> <th>含义</th></tr></thead> <tbody><tr><td><code>git fetch</code></td> <td><strong>拉取远程仓库的最新变更，但不做合并。</strong> 只是更新你本地的远程分支引用，不会影响你当前的工作区。</td></tr> <tr><td><code>git pull</code></td> <td><strong>等于 <code>git fetch</code> + <code>git merge</code>。</strong> 先拉取远程最新变更，再尝试和你当前的分支合并。</td></tr></tbody></table> <p>假设远程 <code>origin/master</code> 有新的提交。</p> <p>你现在在本地的 <code>master</code> 分支。</p> <p>如果你执行：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git fetch origin master
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li><p>本地的远程分支：<code>origin/master</code> 会更新到最新状态。</p></li> <li><p>但你的本地分支 <code>master</code> 还是原来的状态。</p></li> <li><p>如果要把更新的内容合并进来，你得手动做：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git merge origin/master
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li></ul> <p>如果你执行：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git pull origin master
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>本地的远程分支 <code>origin/master</code> 会更新到最新状态。</li> <li><strong>而且！</strong> Git 会自动尝试把这些新提交合并到你当前的 <code>master</code> 分支。</li></ul></details> <h2 id="配置-ssh"><a href="#配置-ssh" class="header-anchor">#</a> 配置 SSH</h2> <ol><li>配置SSH Key</li></ol> <div class="language-text line-numbers-mode"><pre class="language-text"><code>git config --global user.name &quot;这里输入你在GitHub的账户名&quot;
+git config --global user.email &quot;这里输入你在GitHub的注册邮箱名&quot; （没有引号）
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="2"><li>生成ssh key，如果已经生成就不用了</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>ssh-keygen -t rsa -C &quot;这里输入你在 GitHub 的注册邮箱&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="3"><li>查看是否有sshkey</li></ol> <p>先后输入</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>cd ~/.ssh
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-text line-numbers-mode"><pre class="language-text"><code>ls
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>如果出现</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>id_rsa  id_rsa.pub
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>就说明成功了</p> <ol start="4"><li>复制公钥</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>cat id_rsa.pub
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>把显示的密匙复制</p> <ol start="5"><li>把密匙添加到github账户</li></ol> <p>Settings &gt; SSH and GPG Keys</p> <p>New SSH Key</p> <ol start="6"><li>检查一下 SSH Key 是否安装成功</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ ssh -T git@github.com
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>如果出现</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Hi Juliecodestack! You've successfully authenticated, but GitHub does not provide shell access.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>就说明成功了</p> <h2 id="fork别人的仓库"><a href="#fork别人的仓库" class="header-anchor">#</a> Fork别人的仓库</h2> <p>如果需要加入别人的项目</p> <p>Fork别人的项目</p> <p>然后会发现自己的仓库里面也会多出来这样一个项目</p> <p>修改好之后Pull request</p> <p>点击提交，那么就可以发送请求给原作者</p> <h2 id="参考资料"><a href="#参考资料" class="header-anchor">#</a> 参考资料</h2> <p><a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">git官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://link.zhihu.com/?target=https%3A//www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener noreferrer">廖雪峰老师的Git教程<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div></div> <!----> <div class="page-edit"><!----> <!----> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/66c6f2/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">MySQL 笔记</div></a> <a href="/pages/7109c7/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">Vim 使用指南</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/66c6f2/" class="prev">MySQL 笔记</a></span> <span class="next"><a href="/pages/7109c7/">Vim 使用指南</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/fa9210/"><div>
+            计算机网络笔记
+            <!----></div></a> <span class="date">06-13</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/99ffeb/"><div>
+            LLM101 NLP学习笔记
+            <!----></div></a> <span class="date">06-02</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/ceec75/"><div>
+            《python科学计算入门》学习笔记
+            <!----></div></a> <span class="date">05-30</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:1485868106@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/chengyiwei" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/user/home?id=1413383674" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2024-2025
+    <span>Martian148 | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.f08b54a0.js" defer></script><script src="/assets/js/2.30da42f9.js" defer></script><script src="/assets/js/26.91a1ae5d.js" defer></script>
+  </body>
+</html>
